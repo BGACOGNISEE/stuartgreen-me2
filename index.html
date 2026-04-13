@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stuart J. Green | Anti-Resilience Strategist</title>
+<meta name="description" content="Stuart J. Green is an Anti-Resilience Strategist and Operating Model Advisor. Author of The Regenerate Leap. Founder of Blue-Green Advisors. UK and Europe Lead, Cognisee, PBC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #1A7A6D;
+    --ink: #1C1C1A;
+    --ground: #F8F8F6;
+    --grey: #6B6B68;
+    --line: #E5E3DC;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Source Serif Pro', Georgia, serif;
+    color: var(--ink);
+    background: var(--ground);
+    line-height: 1.6;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.2; }
+  a { color: var(--teal); text-decoration: none; transition: border-color 0.2s; }
+  a:hover { text-decoration: underline; }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 32px; }
+
+  nav.top {
+    position: sticky; top: 0; background: var(--ground);
+    border-bottom: 1px solid var(--line); z-index: 100; padding: 16px 0;
+  }
+  nav.top .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  nav.top .brand { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--ink); }
+  nav.top ul { list-style: none; display: flex; gap: 24px; flex-wrap: wrap; }
+  nav.top ul a { color: var(--ink); font-size: 15px; text-decoration: none; }
+  nav.top ul a:hover { color: var(--teal); }
+
+  section.hero { padding: 80px 0 96px; }
+  .hero-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 48px; align-items: center; }
+  .hero-text h1 { font-size: 56px; margin-bottom: 24px; letter-spacing: -0.02em; }
+  .hero-text h2 { font-size: 26px; font-weight: 400; color: var(--teal); margin-bottom: 20px; line-height: 1.4; font-family: 'Playfair Display', Georgia, serif; }
+  .hero-text h3 { font-size: 18px; font-weight: 400; color: var(--grey); line-height: 1.6; }
+  .hero-photo img { width: 100%; max-width: 300px; height: auto; display: block; border-radius: 2px; }
+
+  section { padding: 80px 0; border-top: 1px solid var(--line); }
+  section h2.section-title { font-size: 36px; margin-bottom: 32px; }
+  section p { margin-bottom: 20px; max-width: 720px; }
+  section p:last-child { margin-bottom: 0; }
+
+  .phases { margin: 40px 0; }
+  .phase { margin-bottom: 36px; padding-left: 24px; border-left: 3px solid var(--teal); }
+  .phase h4 { font-size: 24px; color: var(--teal); margin-bottom: 12px; letter-spacing: 1px; }
+
+  .press-row { margin: 32px 0; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .press-row .label { font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--grey); margin-bottom: 12px; display: block; }
+  .press-row .links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+  .press-row .links a { font-size: 16px; }
+
+  .btn { display: inline-block; padding: 12px 28px; background: var(--teal); color: var(--ground); border: none; font-family: 'Source Serif Pro', serif; font-size: 16px; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+  .btn:hover { background: var(--ink); text-decoration: none; }
+
+  .endorsement { font-family: 'Playfair Display', serif; font-size: 22px; line-height: 1.5; padding: 24px 0; max-width: 800px; font-style: italic; }
+  .endorsement-border { border-bottom: 1px solid var(--line); }
+  .endorsement footer { font-family: 'Source Serif Pro', serif; font-size: 14px; color: var(--grey); margin-top: 16px; font-style: normal; }
+  .endorsement footer strong { color: var(--ink); display: block; font-size: 16px; }
+
+  .topics { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px; }
+  .topic h4 { font-family: 'Source Serif Pro', serif; font-size: 18px; font-weight: 600; color: var(--teal); margin-bottom: 8px; }
+  .topic p { font-size: 16px; }
+
+  .soundbites blockquote { font-family: 'Playfair Display', serif; font-size: 26px; line-height: 1.4; padding: 24px 0; border-bottom: 1px solid var(--line); max-width: 800px; }
+  .soundbites blockquote:last-child { border-bottom: none; }
+
+  .contact-grid { display: flex; flex-direction: column; gap: 16px; max-width: 600px; }
+  .contact-grid .row { display: flex; gap: 16px; align-items: baseline; }
+  .contact-grid .label { font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--grey); min-width: 100px; }
+
+  footer.site-footer { padding: 48px 0; border-top: 1px solid var(--line); background: var(--ground); }
+  footer.site-footer .container { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; font-size: 14px; color: var(--grey); }
+  footer.site-footer h5 { font-family: 'Source Serif Pro', serif; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--ink); margin-bottom: 12px; }
+  footer.site-footer ul { list-style: none; }
+  footer.site-footer ul li { margin-bottom: 6px; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-in {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+  }
+  .fade-in.visible {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-text h1 { font-size: 40px; }
+    .hero-text h2 { font-size: 22px; }
+    .topics { grid-template-columns: 1fr; }
+    footer.site-footer .container { grid-template-columns: 1fr; }
+    nav.top ul { display: none; }
+    section { padding: 56px 0; }
+    section h2.section-title { font-size: 28px; }
+    .soundbites blockquote { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="container">
+    <div class="brand">Stuart J. Green</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#method">Method</a></li>
+      <li><a href="#book">Book</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#advisory">Advisory</a></li>
+      <li><a href="#commentary">Commentary</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1 class="fade-in">Stuart J. Green</h1>
+        <h2 class="fade-in" style="animation-delay: 0.1s;">Anti-Resilience Strategist. Operating Model Advisor.</h2>
+        <h3 class="fade-in" style="animation-delay: 0.2s;">Author of <em>The Regenerate Leap</em>. Founder of Blue-Green Advisors. UK and Europe Lead, Cognisee, PBC.</h3>
+      </div>
+      <div class="hero-photo fade-in" style="animation-delay: 0.3s;">
+        <img src="stuart_hero.jpg" alt="Stuart J. Green">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title fade-in">Biography</h2>
+    <p class="fade-in">Stuart J. Green works with institutional leaders navigating irreversible change, applying three decades of marine systems science to organisations where the previous model is structurally obsolete. He helps CEOs and boards diagnose why their operating model no longer works in current conditions, and what needs to change, drawing on experience from major development banks navigating systemic reform to collapsed fishing communities and SMEs across Asia-Pacific.</p>
+    <p class="fade-in">He helps organisations redesign models built for conditions that no longer exist, identifying outdated assumptions, incentives that reward the wrong behaviour, and governance structures that slow down decision-making. His approach enables organisations to reset direction and design what comes next.</p>
+  </div>
+</section>
+
+<section id="why">
+  <div class="container">
+    <h2 class="section-title fade-in">Why this methodology is different</h2>
+    <p class="fade-in">Most operating model methodologies are developed in business schools and consulting firms, then tested on clients. Stuart's was forged in the opposite direction. He spent a decade embedded in coastal communities and SMEs across Asia-Pacific where entire marine economies had become structurally unviable. He watched systems collapse in real time: fishing communities that had sustained families for generations, small enterprises that could not absorb compound shocks, governance structures that accelerated the failure they were designed to prevent.</p>
+    <p class="fade-in">That direct observation of structural failure at the point of collapse is what separates Stuart's diagnostic lens from theory developed in a seminar room. He then scaled those patterns into institutional design at the global level, advising the World Bank, the Asian Development Bank (contributing to a USD 6 billion Oceans and Blue Economy Plan 2030), and the United Kingdom Government's GBP 400 million Blue Planet Fund.</p>
+    <p class="fade-in">Across these roles, he mobilised over USD 500 million into systemic reform and designed governance systems spanning more than 100 large-scale programmes across six Asia-Pacific jurisdictions. Every framework was tested in complex, politically sensitive environments where failure carried real economic and social consequences. The methodology works because it was built where getting the diagnosis wrong meant livelihoods collapsed, not where it meant a quarterly target was missed.</p>
+  </div>
+</section>
+
+<section id="method">
+  <div class="container">
+    <h2 class="section-title fade-in">The methodology</h2>
+    <p class="fade-in">The REGENERATE framework emerged from two converging lines of inquiry: the science of how ecological systems regenerate after catastrophic disturbance (marine systems science, fire ecology, regenerative cycles), and three decades of direct observation of how institutions, SMEs, and governance systems either redesign under compound pressure or fail.</p>
+    <p class="fade-in">The framework does not borrow metaphors from nature. It translates the structural patterns that natural systems have stress-tested over 3.8 billion years into enforceable strategy for organisations facing irreversible change. It provides leaders with a diagnostic methodology for what comes next when traditional recovery approaches have structurally failed.</p>
+    <p class="fade-in">The framework has three phases.</p>
+
+    <div class="phases">
+      <div class="phase fade-in">
+        <h4>RAZE</h4>
+        <p>The strategic decommissioning of what no longer fits. The institutional habits, capacities, structures, and assumptions that the organisation is still defending despite the conditions having moved past them. RAZE is the deliberate clearing of capacity that has been locked into obsolete commitments. Most organisations cannot grow because they have nothing left to grow with. RAZE recovers that capacity.</p>
+      </div>
+      <div class="phase fade-in">
+        <h4>ENRICH</h4>
+        <p>Composting what was cleared into the substrate that supports what comes next. Governance, capacity, relationships, capital, and the institutional conditions that determine whether new growth is possible at all. ENRICH is the phase most organisations skip. They clear and they plant in the same season. The substrate is not ready. The new model fails because the conditions for it have not been built.</p>
+      </div>
+      <div class="phase fade-in">
+        <h4>GROW</h4>
+        <p>The design and resourcing of the organisation's next operating model. A new form fitted to current and emerging conditions, built on the substrate that ENRICH prepared and the capacity that RAZE recovered. GROW is designed work. It is the only phase the organisation sees as growth, but it is dependent on the two phases that came before it.</p>
+      </div>
+    </div>
+
+    <p class="fade-in">The framework was tested under the most demanding conditions before it was applied to corporate and governance contexts. This is not a theoretical model. It was forged in environments where the consequences of failure were immediate and material. Its core principles, including strategic decommissioning (what you stop doing matters more than what you start), signal extraction, and baseline shift recognition, emerged from observing what actually works when the old model has structurally failed and the organisation must design what replaces it.</p>
+  </div>
+</section>
+
+<section id="book">
+  <div class="container">
+    <h2 class="section-title fade-in">The Regenerate Leap</h2>
+    <p class="fade-in"><em>The Regenerate Leap: How Leaders Transform Crisis into Enduring Growth</em> is for CEOs navigating technological or industry upheaval, founders facing structural setbacks, and executives leading teams through compound disruption.</p>
+    <p class="fade-in">The book provides the REGENERATE framework: a three-phase methodology (RAZE, ENRICH, GROW) built on the science of how natural systems regenerate after catastrophic disturbance. It shows how to use the crisis itself to build a structurally stronger model, rather than attempting to restore conditions that no longer exist.</p>
+    <div class="press-row fade-in">
+      <span class="label">Coverage and commentary</span>
+      <div class="links">
+        <a href="https://www.forbes.com/sites/sallypercy/2026/03/24/how-to-be-a-more-compassionate-leader/" target="_blank" rel="noopener">Forbes</a>
+        <a href="https://www.fastcompany.com/91465078/the-18-minute-weekly-reset-high-performing-leaders-use-to-stay-ahead-of-constant-disruption-management-business-disruption" target="_blank" rel="noopener">Fast Company</a>
+        <a href="https://en.incarabia.com/from-resilience-to-regeneration-a-leadership-shift-the-middle-east-can%E2%80%99t-ignore-810967.html" target="_blank" rel="noopener">Inc. Arabia</a>
+        <a href="https://ceoworld.biz/2025/12/22/nature-is-the-ultimate-teacher-for-building-adaptive-thriving-organizations/" target="_blank" rel="noopener">CEOWORLD Magazine</a>
+        <a href="https://sustainablebusinessmagazine.net/featured/the-regenerate-leap-sets-out-framework-for-leaders-to-turn-crisis-into-enduring-growth/" target="_blank" rel="noopener">Sustainable Business Magazine</a>
+        <a href="https://elitebusinessmagazine.co.uk/reviews/item/the-regenerate-lea" target="_blank" rel="noopener">Elite Business Magazine</a>
+        <a href="https://www.manilatimes.net/2026/01/26/opinion/columns/zero-waste-because-we-must/2264853" target="_blank" rel="noopener">The Manila Times</a>
+      </div>
+    </div>
+    <a href="https://regenerateleap.com" target="_blank" rel="noopener" class="btn fade-in">Visit regenerateleap.com</a>
+  </div>
+</section>
+
+<section id="endorsements">
+  <div class="container">
+    <h2 class="section-title fade-in">What leaders are saying</h2>
+
+    <blockquote class="endorsement endorsement-border fade-in">
+      "The old advice to simply 'bounce back' is a recipe for extinction. Stuart J. Green's REGENERATE provides the essential framework to leap forward and build the future you desire and deserve."
+      <footer>
+        <strong>Peter H. Diamandis, MD</strong>
+        Founder and Executive Chairman, XPRIZE Foundation. Founder, Singularity University and Abundance360. Author of <em>Abundance</em>, <em>BOLD</em>, and <em>The Future is Faster Than You Think</em>.
+      </footer>
+    </blockquote>
+
+    <blockquote class="endorsement endorsement-border fade-in">
+      "Stuart J. Green has captured this truth brilliantly. His framework moves beyond the tired rhetoric of resilience and provides a clear, actionable methodology for genuine institutional renewal. This book should be required reading for every consultant and consulting leader who wants to deliver lasting value, not just temporary fixes."
+      <footer>
+        <strong>Professor Joe O'Mahoney</strong>
+        CEO, Equity Sherpa Ltd. Twenty years studying and advising consulting firms.
+      </footer>
+    </blockquote>
+
+    <blockquote class="endorsement fade-in">
+      "Building mindful, responsible AI has taught me that the hardest problems aren't technological, they're human. I've worked with Stuart and watched him help leaders dismantle those human barriers. The Regenerate Leap is the missing piece: a rigorous, humane playbook for leading with courage through profound technological change. I wish I'd had this book a decade ago."
+      <footer>
+        <strong>Ahmer Inam</strong>
+        Founder and CEO, Cognisee, PBC.
+      </footer>
+    </blockquote>
+  </div>
+</section>
+
+<section id="research">
+  <div class="container">
+    <h2 class="section-title fade-in">The science underneath the method</h2>
+    <p class="fade-in">The methodology draws on three decades of peer-reviewed research and institutional reports in marine systems science, fisheries governance, and ecosystem-based management. Stuart is the author or co-author of more than 36 published works with over 580 citations and an h-index of 11, spanning marine protected area design, climate-informed fisheries management, coastal governance, and active management of complex ecological systems.</p>
+    <p class="fade-in">Selected venues include <em>Marine Policy</em>, <em>Conservation and Society</em>, <em>Biodiversity and Conservation</em>, <em>Ocean and Coastal Management</em>, and <em>Conservation Science and Practice</em>.</p>
+    <p class="fade-in">A complete publications list is available on request.</p>
+  </div>
+</section>
+
+<section id="advisory">
+  <div class="container">
+    <h2 class="section-title fade-in">Blue-Green Advisors</h2>
+    <p class="fade-in">Stuart J. Green is the founder of Blue-Green Advisors (BGA), an advisory firm that diagnoses structural failure in organisations and designs the systems to replace what has stopped working. He is also UK and Europe lead at Cognisee, PBC.</p>
+    <p class="fade-in">BGA advises across the spectrum, from SMEs facing market disruption to multilateral institutions navigating systemic reform, applying the same diagnostic methodology at every scale.</p>
+    <a href="https://bluegreenadvisors.com" target="_blank" rel="noopener" class="btn fade-in">Visit bluegreenadvisors.com</a>
+  </div>
+</section>
+
+<section id="commentary">
+  <div class="container">
+    <h2 class="section-title fade-in">Available for expert commentary</h2>
+    <p class="fade-in">Stuart J. Green is available for interviews, bylined articles, expert commentary, and panel contributions on the following topics:</p>
+    <div class="topics">
+      <div class="topic fade-in">
+        <h4>AI and Organisational Design</h4>
+        <p>Why AI is exposing the structural flaws organisations have been ignoring, and why the organisations getting the most from AI redesigned how they work first.</p>
+      </div>
+      <div class="topic fade-in">
+        <h4>Board and CEO Misalignment</h4>
+        <p>Why boards and CEOs talk past each other on strategy during transformation, and how to diagnose whether the problem is leadership or architecture.</p>
+      </div>
+      <div class="topic fade-in">
+        <h4>The Broken Operating Model</h4>
+        <p>How to identify when an operating model has quietly stopped working, and what competent leaders miss when the architecture is the constraint.</p>
+      </div>
+      <div class="topic fade-in">
+        <h4>When Efficiency Becomes the Vulnerability</h4>
+        <p>Why the most optimised organisations are often the most fragile, and what nature knows about resilience that most CFOs do not.</p>
+      </div>
+      <div class="topic fade-in">
+        <h4>The Resilience Trap</h4>
+        <p>Why "bouncing back" is the wrong goal when the world is not going back to what it was, and what regeneration requires instead, including the discipline of strategic decommissioning.</p>
+      </div>
+      <div class="topic fade-in">
+        <h4>Compound Disruption and Polycrisis</h4>
+        <p>Why traditional crisis management fails when disruptions are simultaneous, structural, and permanent.</p>
+      </div>
+      <div class="topic fade-in">
+        <h4>Leadership vs. Design</h4>
+        <p>How to tell whether your organisation has a leadership problem or a design problem, and why the distinction determines everything.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="soundbites" class="soundbites">
+  <div class="container">
+    <h2 class="section-title fade-in">On the record</h2>
+    <blockquote class="fade-in">"Resilience is a trap. Regeneration is a strategy."</blockquote>
+    <blockquote class="fade-in">"Organisations exhaust themselves restoring conditions that no longer exist."</blockquote>
+    <blockquote class="fade-in">"The baseline has shifted. There is nothing to bounce back to."</blockquote>
+    <blockquote class="fade-in">"Some systems require fire to release dormant capacity."</blockquote>
+    <blockquote class="fade-in">"The question is whether you design for disruption or let it design you."</blockquote>
+    <blockquote class="fade-in">"Nature has been stress-testing regeneration for 3.8 billion years. I translate those patterns for leaders."</blockquote>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title fade-in">Contact</h2>
+    <p class="fade-in">For media enquiries, speaking availability, and interview scheduling:</p>
+    <div class="contact-grid fade-in">
+      <div class="row"><span class="label">Email</span><a href="mailto:stuart@bluegreenadvisors.com">stuart@bluegreenadvisors.com</a></div>
+      <div class="row"><span class="label">Book</span><a href="https://regenerateleap.com" target="_blank" rel="noopener">regenerateleap.com</a></div>
+      <div class="row"><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/bluegreenadvisors/" target="_blank" rel="noopener">Stuart J. Green</a></div>
+    </div>
+    <p class="fade-in" style="margin-top: 32px;">Stuart is available for in-studio broadcast, remote interview, pre-recorded commentary, and panel contributions. For urgent media requests, contact the PR team directly.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <h5>Stuart J. Green</h5>
+      <p>&copy; 2026. All rights reserved.</p>
+    </div>
+    <div>
+      <h5>The work</h5>
+      <ul>
+        <li><a href="https://bluegreenadvisors.com" target="_blank" rel="noopener">Blue-Green Advisors</a></li>
+        <li><a href="https://regenerateleap.com" target="_blank" rel="noopener">The Regenerate Leap</a></li>
+        <li><a href="https://www.cognisee.ai" target="_blank" rel="noopener">Cognisee, PBC</a></li>
+        <li><a href="https://regenerateos.com" target="_blank" rel="noopener">RegenerateOS</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Connect</h5>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/bluegreenadvisors/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:stuart@bluegreenadvisors.com">stuart@bluegreenadvisors.com</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var els = document.querySelectorAll('.fade-in');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function(el) {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  } else {
+    els.forEach(function(el) { el.style.opacity = '1'; });
+  }
+});
+</script>
+
+</body>
+</html>
