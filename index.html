@@ -3,14 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stuart J. Green | Anti-Resilience Strategist</title>
-<meta name="description" content="Stuart J. Green is an Anti-Resilience Strategist and Operating Model Advisor. Author of The Regenerate Leap. Founder of Blue-Green Advisors. UK and Europe Lead, Cognisee, PBC.">
+<title>Stuart J. Green | Operating Model Advisor &amp; Author | The Regenerate Leap</title>
+<meta name="description" content="Stuart J. Green helps CEOs and boards redesign operating models built for conditions that no longer exist. Author of The Regenerate Leap. Founder, Blue-Green Advisors.">
+<meta name="keywords" content="operating model transformation, organisational redesign, leadership through disruption, regenerate framework, anti-resilience strategist, Stuart J. Green">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
     --teal: #1A7A6D;
+    --teal-dark: #0F3D34;
     --ink: #1C1C1A;
     --ground: #F8F8F6;
     --grey: #6B6B68;
@@ -36,42 +38,93 @@
     position: sticky; top: 0; background: var(--ground);
     border-bottom: 1px solid var(--line); z-index: 100; padding: 16px 0;
   }
-  nav.top .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  nav.top .container { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
   nav.top .brand { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--ink); }
+  nav.top .nav-right { display: flex; align-items: center; gap: 24px; }
   nav.top ul { list-style: none; display: flex; gap: 24px; flex-wrap: wrap; }
   nav.top ul a { color: var(--ink); font-size: 15px; text-decoration: none; }
   nav.top ul a:hover { color: var(--teal); }
+  nav.top .nav-cta { display: inline-block; padding: 8px 16px; background: var(--teal); color: var(--ground); font-size: 14px; font-weight: 600; border-radius: 2px; text-decoration: none; transition: background 0.2s; }
+  nav.top .nav-cta:hover { background: var(--ink); text-decoration: none; }
+  nav.top .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+  nav.top .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--ink); }
+  .nav-menu { display: none; border-top: 1px solid var(--line); background: var(--ground); }
+  .nav-menu.open { display: block; }
+  .nav-menu ul { list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 16px 0; }
+  .nav-menu a { color: var(--ink); font-size: 15px; }
+  .nav-menu .nav-cta { display: inline-block; padding: 8px 16px; background: var(--teal); color: var(--ground); font-size: 14px; font-weight: 600; border-radius: 2px; }
 
   section.hero { padding: 80px 0 96px; }
-  .hero-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 48px; align-items: center; }
-  .hero-text h1 { font-size: 56px; margin-bottom: 24px; letter-spacing: -0.02em; }
-  .hero-text h2 { font-size: 26px; font-weight: 400; color: var(--teal); margin-bottom: 20px; line-height: 1.4; font-family: 'Playfair Display', Georgia, serif; }
-  .hero-text h3 { font-size: 18px; font-weight: 400; color: var(--grey); line-height: 1.6; }
-  .hero-photo img { width: 100%; max-width: 300px; height: auto; display: block; border-radius: 2px; }
+  .hero-top { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; margin-bottom: 56px; }
+  .hero-photo { width: 260px; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .hero-eyebrow { font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); display: block; margin-bottom: 16px; }
+  .hero h1 { font-size: 56px; margin-bottom: 24px; letter-spacing: -0.02em; line-height: 1.1; }
+  .hero-bio { font-size: 19px; color: var(--grey); max-width: 640px; margin-bottom: 0; }
+  .hero-subhead { font-size: 30px; margin-bottom: 32px; }
+
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+  .card { background: #FFFFFF; border-top: 3px solid var(--teal); border-radius: 2px; padding: 24px; display: flex; flex-direction: column; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .card .card-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); display: block; margin-bottom: 12px; }
+  .card h3 { font-size: 20px; margin-bottom: 12px; line-height: 1.3; }
+  .card .card-desc { font-size: 15px; color: var(--grey); margin-bottom: 12px; }
+  .card .card-tag { font-size: 13px; color: var(--grey); margin-bottom: 16px; }
+  .card .card-link { margin-top: auto; color: var(--teal); font-weight: 600; font-size: 15px; }
+
+  .hero-footer-nav { display: flex; flex-wrap: wrap; gap: 12px; font-size: 15px; color: var(--grey); }
+  .hero-footer-nav a { font-size: 15px; }
+
+  section.press { padding: 48px 0; border-top: 1px solid var(--line); }
+  .press-overline { font-family: 'Source Serif Pro', Georgia, serif; font-weight: 400; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); display: block; margin-bottom: 24px; }
+  .press-list { list-style: none; }
+  .press-item a { display: grid; grid-template-columns: 1fr; gap: 4px; text-decoration: none; color: inherit; padding: 16px 0; border-bottom: 1px solid var(--line); transition: padding-left .3s ease; }
+  .press-item:last-child a { border-bottom: none; }
+  .press-item a:hover { padding-left: 8px; }
+  .press-item a:hover .press-head { color: var(--teal); }
+  @media (min-width: 680px) { .press-item a { grid-template-columns: 180px 1fr; gap: 24px; align-items: baseline; } }
+  .press-outlet { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); }
+  .press-head { font-family: "Playfair Display", serif; font-size: 17px; line-height: 1.35; color: var(--ink); transition: color .2s ease; }
+
+  section.stats { padding: 32px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #FFFFFF; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+  .stat .number { font-family: 'Playfair Display', Georgia, serif; font-size: 36px; font-weight: 700; color: var(--teal); display: block; line-height: 1.1; }
+  .stat .stat-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--grey); }
+
+  section.media-kit { background: #FFFFFF; }
+  .media-kit .kit-label { font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); display: block; margin-bottom: 12px; }
 
   section { padding: 80px 0; border-top: 1px solid var(--line); }
   section h2.section-title { font-size: 36px; margin-bottom: 32px; }
   section p { margin-bottom: 20px; max-width: 720px; }
   section p:last-child { margin-bottom: 0; }
 
-  .phases { margin: 40px 0; }
-  .phase { margin-bottom: 36px; padding-left: 24px; border-left: 3px solid var(--teal); }
-  .phase h4 { font-size: 24px; color: var(--teal); margin-bottom: 12px; letter-spacing: 1px; }
+  .method-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 40px 0; }
+  .method-card { background: #FFFFFF; border-top: 3px solid var(--teal); border-radius: 2px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .method-card h4 { font-size: 24px; color: var(--teal); margin-bottom: 12px; letter-spacing: 1px; }
+  .method-card p { font-size: 15px; max-width: none; margin-bottom: 0; }
 
-  .press-row { margin: 32px 0; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .press-row .label { font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--grey); margin-bottom: 12px; display: block; }
-  .press-row .sublabel { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--grey); margin: 18px 0 8px; display: block; font-weight: 600; }
-  .press-row .group:first-of-type .sublabel { margin-top: 0; }
-  .press-row .links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
-  .press-row .links a { font-size: 16px; }
+  section.framework { background: #FFFFFF; }
+  .btn-group { display: flex; flex-wrap: wrap; gap: 16px; }
+
+  .book-grid { display: grid; grid-template-columns: 240px 1fr; gap: 40px; align-items: start; margin-bottom: 32px; }
+  .book-cover { display: block; width: 100%; max-width: 240px; height: auto; border-radius: 2px; box-shadow: 0 4px 14px rgba(0,0,0,0.12); }
+  .book-text p { margin-bottom: 20px; }
+  .pills { display: flex; flex-wrap: wrap; gap: 12px; }
+  .pills a { display: inline-block; padding: 6px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; color: var(--ink); transition: all 0.2s; }
+  .pills a:hover { background: var(--teal); color: #FFFFFF; border-color: var(--teal); text-decoration: none; }
+  .coverage-block { padding-top: 24px; border-top: 1px solid var(--line); }
+  .coverage-block .label { font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--grey); margin-bottom: 16px; display: block; }
 
   .btn { display: inline-block; padding: 12px 28px; background: var(--teal); color: var(--ground); border: none; font-family: 'Source Serif Pro', serif; font-size: 16px; font-weight: 600; text-decoration: none; transition: background 0.2s; }
   .btn:hover { background: var(--ink); text-decoration: none; }
+  .btn-outline { display: inline-block; padding: 12px 28px; border: 1px solid var(--teal); color: var(--teal); font-family: 'Source Serif Pro', serif; font-size: 16px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+  .btn-outline:hover { background: var(--teal); color: var(--ground); text-decoration: none; }
 
-  .endorsement { font-family: 'Playfair Display', serif; font-size: 22px; line-height: 1.5; padding: 24px 0; max-width: 800px; font-style: italic; }
-  .endorsement-border { border-bottom: 1px solid var(--line); }
-  .endorsement footer { font-family: 'Source Serif Pro', serif; font-size: 14px; color: var(--grey); margin-top: 16px; font-style: normal; }
-  .endorsement footer strong { color: var(--ink); display: block; font-size: 16px; }
+  .endorsement-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .endorsement-card { background: #FFFFFF; border: 1px solid var(--line); border-radius: 2px; padding: 24px; display: flex; flex-direction: column; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .endorsement-card .quote { font-family: 'Playfair Display', serif; font-size: 19px; line-height: 1.45; font-style: italic; margin-bottom: 20px; }
+  .endorsement-card .attr { margin-top: auto; }
+  .endorsement-card .attr strong { color: var(--ink); display: block; font-size: 15px; }
+  .endorsement-card .attr span { font-size: 14px; color: var(--grey); }
 
   .topics { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px; }
   .topic h4 { font-family: 'Source Serif Pro', serif; font-size: 18px; font-weight: 600; color: var(--teal); margin-bottom: 8px; }
@@ -79,6 +132,9 @@
 
   .soundbites blockquote { font-family: 'Playfair Display', serif; font-size: 26px; line-height: 1.4; padding: 24px 0; border-bottom: 1px solid var(--line); max-width: 800px; }
   .soundbites blockquote:last-child { border-bottom: none; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
+  .tags span { display: inline-block; padding: 6px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; color: var(--ink); }
 
   .contact-grid { display: flex; flex-direction: column; gap: 16px; max-width: 600px; }
   .contact-grid .row { display: flex; gap: 16px; align-items: baseline; }
@@ -102,14 +158,25 @@
     opacity: 1;
   }
 
-  @media (max-width: 768px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-    .hero-text h1 { font-size: 40px; }
-    .hero-text h2 { font-size: 22px; }
+  @media (max-width: 720px) {
+    .hero h1 { font-size: 40px; }
+    .hero-subhead { font-size: 24px; }
+    .hero-top { grid-template-columns: 1fr; gap: 32px; }
+    .hero-photo { width: 200px; }
+    .cards { grid-template-columns: 1fr; }
+    .method-cards { grid-template-columns: 1fr; }
+    .endorsement-cards { grid-template-columns: 1fr; }
+    .book-grid { grid-template-columns: 1fr; gap: 24px; }
+    .book-cover { max-width: 220px; }
     .topics { grid-template-columns: 1fr; }
     footer.site-footer .container { grid-template-columns: 1fr; }
-    nav.top ul { display: none; }
+    nav.top .nav-right ul, nav.top .nav-right .nav-cta { display: none; }
+    nav.top .nav-toggle { display: flex; }
+    .nav-menu.open ul { display: flex; }
+    .stats-grid { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
+    .stat .number { font-size: 30px; }
     section { padding: 56px 0; }
+    section.hero { padding: 56px 0 64px; }
     section h2.section-title { font-size: 28px; }
     .soundbites blockquote { font-size: 22px; }
   }
@@ -120,29 +187,103 @@
 <nav class="top">
   <div class="container">
     <div class="brand">Stuart J. Green</div>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#method">Method</a></li>
-      <li><a href="#book">Book</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#advisory">Advisory</a></li>
-      <li><a href="#commentary">Commentary</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#method">Method</a></li>
+        <li><a href="#book">Book</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#advisory">Advisory</a></li>
+        <li><a href="#commentary">Commentary</a></li>
+        <li><a href="#speaking">Speaking</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Get in Touch</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-menu" id="navMenu">
+    <div class="container">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#method">Method</a></li>
+        <li><a href="#book">Book</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#advisory">Advisory</a></li>
+        <li><a href="#commentary">Commentary</a></li>
+        <li><a href="#speaking">Speaking</a></li>
+        <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
 <section class="hero">
   <div class="container">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <h1 class="fade-in">Stuart J. Green</h1>
-        <h2 class="fade-in" style="animation-delay: 0.1s;">Anti-Resilience Strategist. Operating Model Advisor.</h2>
-        <h3 class="fade-in" style="animation-delay: 0.2s;">Author of <em>The Regenerate Leap</em>. Founder of Blue-Green Advisors. UK and Europe Lead, Cognisee, PBC.</h3>
+    <div class="hero-top">
+      <div>
+        <span class="hero-eyebrow fade-in">Anti-resilience strategist</span>
+        <h1 class="fade-in" style="animation-delay: 0.1s;">Stuart J. Green</h1>
+        <p class="hero-bio fade-in" style="animation-delay: 0.2s;">Stuart J. Green works with institutional leaders navigating irreversible change, applying 30 years of marine systems science to organisations where the previous model is structurally obsolete.</p>
       </div>
-      <div class="hero-photo fade-in" style="animation-delay: 0.3s;">
-        <img src="stuart_hero.jpg" alt="Stuart J. Green">
+      <img class="hero-photo fade-in" style="animation-delay: 0.15s;" src="stuart_hero.jpg" alt="Stuart J. Green">
+    </div>
+
+    <h2 class="hero-subhead fade-in" style="animation-delay: 0.25s;">Where you are heading</h2>
+
+    <div class="cards">
+      <div class="card fade-in">
+        <span class="card-label">For boards and chief executives</span>
+        <h3>The Operating Model Fitness Index</h3>
+        <p class="card-desc">A thirteen-question diagnostic that scores the misfit between your operating model and the conditions you now face. The result is structural data your board chair can read.</p>
+        <p class="card-tag">13 questions &middot; 5 minutes &middot; on your phone</p>
+        <a href="https://theregenerateframework.com" target="_blank" rel="noopener" class="card-link">Access the assessment &rarr;</a>
       </div>
+      <div class="card fade-in" style="animation-delay: 0.1s;">
+        <span class="card-label">For readers</span>
+        <h3><em>The Regenerate Leap</em></h3>
+        <p class="card-desc">The book. What comes next for leaders when the previous model has structurally failed and there is no prior state worth restoring.</p>
+        <a href="https://www.regenerateleap.com" target="_blank" rel="noopener" class="card-link">Read about the book &rarr;</a>
+      </div>
+      <div class="card fade-in" style="animation-delay: 0.2s;">
+        <span class="card-label">For institutions</span>
+        <h3>Blue-Green Advisors</h3>
+        <p class="card-desc">Advisory for organisations facing compound disruption across the ocean economy and the wider institutional landscape.</p>
+        <a href="https://bluegreenadvisors.com" target="_blank" rel="noopener" class="card-link">Inquire about advisory &rarr;</a>
+      </div>
+    </div>
+
+    <div class="hero-footer-nav fade-in">
+      <a href="https://theregenerateframework.com" target="_blank" rel="noopener">The Regenerate Framework</a>
+      <span>&middot;</span>
+      <a href="https://www.regenerateleap.com" target="_blank" rel="noopener">The Regenerate Leap</a>
+      <span>&middot;</span>
+      <a href="https://bluegreenadvisors.com" target="_blank" rel="noopener">Blue-Green Advisors</a>
+    </div>
+  </div>
+</section>
+
+<section class="press">
+  <div class="container">
+    <h2 class="press-overline fade-in">Selected coverage</h2>
+    <ul class="press-list">
+      <li class="press-item fade-in"><a href="https://www.fastcompany.com/91465078/the-18-minute-weekly-reset-high-performing-leaders-use-to-stay-ahead-of-constant-disruption-management-business-disruption" target="_blank" rel="noopener"><span class="press-outlet">Fast Company</span><span class="press-head">The quick weekly reset high-performing leaders use to stay ahead of disruption</span></a></li>
+      <li class="press-item fade-in"><a href="https://observer.com/2026/05/climate-risk-insurance-markets-resilience-capital" target="_blank" rel="noopener"><span class="press-outlet">Observer</span><span class="press-head">Climate risk is rewriting the logic of global insurance</span></a></li>
+      <li class="press-item fade-in"><a href="https://ceoworld.biz/2025/12/22/nature-is-the-ultimate-teacher-for-building-adaptive-thriving-organizations/" target="_blank" rel="noopener"><span class="press-outlet">CEOWORLD</span><span class="press-head">Nature is the ultimate teacher for building thriving organisations</span></a></li>
+      <li class="press-item fade-in"><a href="https://www.forbes.com/sites/sallypercy/2026/03/24/how-to-be-a-more-compassionate-leader/" target="_blank" rel="noopener"><span class="press-outlet">Forbes</span><span class="press-head">How to be a more compassionate leader</span></a></li>
+      <li class="press-item fade-in"><a href="https://www.familybusinessunited.com" target="_blank" rel="noopener"><span class="press-outlet">Family Business United</span><span class="press-head">When oversight becomes obstruction</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat fade-in"><span class="number">$500M+</span><span class="stat-label">Mobilised into systemic reform</span></div>
+      <div class="stat fade-in" style="animation-delay: 0.1s;"><span class="number">100+</span><span class="stat-label">Large-scale programmes</span></div>
+      <div class="stat fade-in" style="animation-delay: 0.2s;"><span class="number">30 yrs</span><span class="stat-label">Field experience</span></div>
+      <div class="stat fade-in" style="animation-delay: 0.3s;"><span class="number">36</span><span class="stat-label">Peer-reviewed publications</span></div>
     </div>
   </div>
 </section>
@@ -167,112 +308,91 @@
 <section id="method">
   <div class="container">
     <h2 class="section-title fade-in">The methodology</h2>
-    <p class="fade-in">The REGENERATE framework emerged from two converging lines of inquiry: the science of how ecological systems regenerate after catastrophic disturbance (marine systems science, fire ecology, regenerative cycles), and three decades of direct observation of how institutions, SMEs, and governance systems either redesign under compound pressure or fail.</p>
-    <p class="fade-in">The framework does not borrow metaphors from nature. It translates the structural patterns that natural systems have stress-tested over 3.8 billion years into enforceable strategy for organisations facing irreversible change. It provides leaders with a diagnostic methodology for what comes next when traditional recovery approaches have structurally failed.</p>
-    <p class="fade-in">The framework has three phases.</p>
+    <p class="fade-in">The REGENERATE framework emerged from two converging lines of inquiry: the science of how ecological systems regenerate after catastrophic disturbance, and three decades of direct observation of how institutions, SMEs, and governance systems either redesign under compound pressure or fail.</p>
+    <p class="fade-in">The framework does not borrow metaphors from nature. It translates the structural patterns that natural systems have stress-tested over 3.8 billion years into enforceable strategy for organisations facing irreversible change. It has three phases.</p>
 
-    <div class="phases">
-      <div class="phase fade-in">
+    <div class="method-cards">
+      <div class="method-card fade-in">
         <h4>RAZE</h4>
-        <p>The strategic decommissioning of what no longer fits. The institutional habits, capacities, structures, and assumptions that the organisation is still defending despite the conditions having moved past them. RAZE is the deliberate clearing of capacity that has been locked into obsolete commitments. Most organisations cannot grow because they have nothing left to grow with. RAZE recovers that capacity.</p>
+        <p>The strategic decommissioning of what no longer fits. RAZE is the deliberate clearing of capacity that has been locked into obsolete commitments. Most organisations cannot grow because they have nothing left to grow with. RAZE recovers that capacity.</p>
       </div>
-      <div class="phase fade-in">
+      <div class="method-card fade-in" style="animation-delay: 0.1s;">
         <h4>ENRICH</h4>
-        <p>Composting what was cleared into the substrate that supports what comes next. Governance, capacity, relationships, capital, and the institutional conditions that determine whether new growth is possible at all. ENRICH is the phase most organisations skip. They clear and they plant in the same season. The substrate is not ready. The new model fails because the conditions for it have not been built.</p>
+        <p>Composting what was cleared into the substrate that supports what comes next: governance, capacity, relationships, capital. ENRICH is the phase most organisations skip. The new model fails because the conditions for it have not been built.</p>
       </div>
-      <div class="phase fade-in">
+      <div class="method-card fade-in" style="animation-delay: 0.2s;">
         <h4>GROW</h4>
-        <p>The design and resourcing of the organisation's next operating model. A new form fitted to current and emerging conditions, built on the substrate that ENRICH prepared and the capacity that RAZE recovered. GROW is designed work. It is the only phase the organisation sees as growth, but it is dependent on the two phases that came before it.</p>
+        <p>The design and resourcing of the organisation's next operating model. A new form fitted to current and emerging conditions, built on the substrate that ENRICH prepared and the capacity that RAZE recovered.</p>
       </div>
     </div>
 
-    <p class="fade-in">The framework was tested under the most demanding conditions before it was applied to corporate and governance contexts. This is not a theoretical model. It was forged in environments where the consequences of failure were immediate and material. Its core principles, including strategic decommissioning (what you stop doing matters more than what you start), signal extraction, and baseline shift recognition, emerged from observing what actually works when the old model has structurally failed and the organisation must design what replaces it.</p>
+    <p class="fade-in">The framework was tested under the most demanding conditions before it was applied to corporate and governance contexts. Its core principles, including strategic decommissioning (what you stop doing matters more than what you start), signal extraction, and baseline shift recognition, emerged from observing what actually works when the old model has structurally failed and the organisation must design what replaces it.</p>
+  </div>
+</section>
+
+<section id="framework" class="framework">
+  <div class="container">
+    <h2 class="section-title fade-in">The Regenerate Framework</h2>
+    <p class="fade-in">The Operating Model Fitness Index is a thirteen-question diagnostic that scores the misfit between your operating model and the conditions you now face. Five minutes. Thirteen questions. One diagnosis both the CEO and board chair can act on, forwarded to the chair in one click, governance-framed.</p>
+    <div class="btn-group fade-in">
+      <a href="https://theregenerateframework.com" target="_blank" rel="noopener" class="btn">Start the Diagnostic</a>
+      <a href="https://theregenerateframework.com" target="_blank" rel="noopener" class="btn-outline">Read the method</a>
+    </div>
   </div>
 </section>
 
 <section id="book">
   <div class="container">
     <h2 class="section-title fade-in">The Regenerate Leap</h2>
-    <p class="fade-in"><em>The Regenerate Leap: How Leaders Transform Crisis into Enduring Growth</em> is for CEOs navigating technological or industry upheaval, founders facing structural setbacks, and executives leading teams through compound disruption.</p>
-    <p class="fade-in">The book provides the REGENERATE framework: a three-phase methodology (RAZE, ENRICH, GROW) built on the science of how natural systems regenerate after catastrophic disturbance. It shows how to use the crisis itself to build a structurally stronger model, rather than attempting to restore conditions that no longer exist.</p>
-    <div class="press-row fade-in">
-      <span class="label">Coverage and commentary</span>
-      <div class="group">
-        <span class="sublabel">Flagship coverage</span>
-        <div class="links">
-          <a href="https://www.theguardian.com/global-development/2026/jan/22/murder-stuart-green-wife-family-philippines-trauma-book-regenerate-leap" target="_blank" rel="noopener">The Guardian</a>
-          <a href="https://www.france24.com/en/tv-shows/perspective/20260319-my-children-became-my-purpose-author-stuart-j-green-on-rebuilding-after-trauma" target="_blank" rel="noopener">France 24</a>
-          <a href="https://www.youtube.com/watch?v=ayfoJgWNg34" target="_blank" rel="noopener">France 24 (TV interview)</a>
-          <a href="https://observer.com/2026/05/climate-risk-insurance-markets-resilience-capital" target="_blank" rel="noopener">Observer</a>
-        </div>
-      </div>
-      <div class="group">
-        <span class="sublabel">Online coverage</span>
-        <div class="links">
-          <a href="https://www.forbes.com/sites/sallypercy/2026/03/24/how-to-be-a-more-compassionate-leader/" target="_blank" rel="noopener">Forbes</a>
-          <a href="https://www.fastcompany.com/91465078/the-18-minute-weekly-reset-high-performing-leaders-use-to-stay-ahead-of-constant-disruption-management-business-disruption" target="_blank" rel="noopener">Fast Company</a>
-          <a href="https://en.incarabia.com/from-resilience-to-regeneration-a-leadership-shift-the-middle-east-can%E2%80%99t-ignore-810967.html" target="_blank" rel="noopener">Inc. Arabia</a>
-          <a href="https://ceoworld.biz/2025/12/22/nature-is-the-ultimate-teacher-for-building-adaptive-thriving-organizations/" target="_blank" rel="noopener">CEOWORLD Magazine</a>
-          <a href="https://sustainablebusinessmagazine.net/featured/the-regenerate-leap-sets-out-framework-for-leaders-to-turn-crisis-into-enduring-growth/" target="_blank" rel="noopener">Sustainable Business Magazine</a>
-          <a href="https://elitebusinessmagazine.co.uk/reviews/item/the-regenerate-lea" target="_blank" rel="noopener">Elite Business Magazine</a>
-          <a href="https://www.manilatimes.net/2026/01/26/opinion/columns/zero-waste-because-we-must/2264853" target="_blank" rel="noopener">The Manila Times</a>
-          <a href="https://www.huffingtonpost.co.uk/entry/happy-sad-day-grief-children_uk_6978d38fe4b03029646a6e6d" target="_blank" rel="noopener">HuffPost UK</a>
-          <a href="https://www.independent.co.uk/life-style/health-and-families/ngo-brazil-colombia-british-b2915225.html" target="_blank" rel="noopener">The Independent</a>
-          <a href="https://pa.media/blogs/pa-editors-picks/how-one-dad-helped-his-children-through-unimaginable-tragedy/" target="_blank" rel="noopener">PA Media</a>
-          <a href="https://shows.acast.com/the-net-zero-business-podcast/episodes/turning-trauma-into-purpose-with-stuart-green" target="_blank" rel="noopener">Net Zero Business Podcast</a>
-          <a href="https://familybusinessunited.com/post/when-oversight-becomes-obstruction" target="_blank" rel="noopener">Family Business United</a>
-        </div>
-      </div>
-      <div class="group">
-        <span class="sublabel">Print coverage</span>
-        <div class="links">
-          <a href="https://www.scotsman.com" target="_blank" rel="noopener">The Scotsman (Print, 2026)</a>
-          <a href="https://www.thehrdirector.com" target="_blank" rel="noopener">The HRDirector (Print, February 2026)</a>
-          <a href="https://leadership.global/knowledge.html" target="_blank" rel="noopener">Edge, Institute of Leadership and Management (Print, Spring 2026, p.28)</a>
-        </div>
-      </div>
-      <div class="group">
-        <span class="sublabel">Syndicated coverage</span>
-        <div class="links">
-          <a href="https://uk.news.yahoo.com/wifes-death-daughter-helped-us-070017228.html" target="_blank" rel="noopener">Yahoo News UK</a>
-          <a href="https://www.irishnews.com/life/how-one-dad-helped-his-children-through-unimaginable-tragedy-DJN2WZND3ZIMXA2QVNGYZYTQ6U/" target="_blank" rel="noopener">The Irish News</a>
-          <a href="https://www.msn.com/en-gb/news/uknews/how-one-dad-helped-his-children-through-unimaginable-tragedy/ar-AA1VNOO9" target="_blank" rel="noopener">MSN</a>
-          <a href="https://www.offalyexpress.ie/news/lifestyle/2008597/how-one-dad-helped-his-children-through-unimaginable-tragedy.html" target="_blank" rel="noopener">Offaly Express</a>
-          <a href="https://www.ireland-live.ie/news/life/2008563/how-one-dad-helped-his-children-through-unimaginable-tragedy.html" target="_blank" rel="noopener">Ireland Live</a>
-        </div>
+    <div class="book-grid">
+      <img class="book-cover fade-in" src="book-cover.jpg" alt="The Regenerate Leap by Stuart J. Green, book cover">
+      <div class="book-text">
+        <p class="fade-in"><em>The Regenerate Leap: How Leaders Transform Crisis into Enduring Growth</em> is for CEOs navigating technological or industry upheaval, founders facing structural setbacks, and executives leading teams through compound disruption.</p>
+        <p class="fade-in">The book provides the REGENERATE framework: a three-phase methodology (RAZE, ENRICH, GROW) built on the science of how natural systems regenerate after catastrophic disturbance. It shows how to use the crisis itself to build a structurally stronger model, rather than attempting to restore conditions that no longer exist.</p>
+        <a href="https://www.regenerateleap.com/" target="_blank" rel="noopener" class="btn fade-in">Visit regenerateleap.com</a>
       </div>
     </div>
-    <a href="https://www.regenerateleap.com/" target="_blank" rel="noopener" class="btn fade-in">Visit regenerateleap.com</a>
+    <div class="coverage-block fade-in">
+      <span class="label">Selected coverage</span>
+      <div class="pills">
+        <a href="https://www.forbes.com/sites/sallypercy/2026/03/24/how-to-be-a-more-compassionate-leader/" target="_blank" rel="noopener">Forbes</a>
+        <a href="https://www.fastcompany.com/91465078/the-18-minute-weekly-reset-high-performing-leaders-use-to-stay-ahead-of-constant-disruption-management-business-disruption" target="_blank" rel="noopener">Fast Company</a>
+        <a href="https://en.incarabia.com/from-resilience-to-regeneration-a-leadership-shift-the-middle-east-can%E2%80%99t-ignore-810967.html" target="_blank" rel="noopener">Inc. Arabia</a>
+        <a href="https://ceoworld.biz/2025/12/22/nature-is-the-ultimate-teacher-for-building-adaptive-thriving-organizations/" target="_blank" rel="noopener">CEOWORLD Magazine</a>
+        <a href="https://sustainablebusinessmagazine.net/featured/the-regenerate-leap-sets-out-framework-for-leaders-to-turn-crisis-into-enduring-growth/" target="_blank" rel="noopener">Sustainable Business</a>
+        <a href="https://elitebusinessmagazine.co.uk/reviews/item/the-regenerate-lea" target="_blank" rel="noopener">Elite Business</a>
+        <a href="https://www.manilatimes.net/2026/01/26/opinion/columns/zero-waste-because-we-must/2264853" target="_blank" rel="noopener">The Manila Times</a>
+      </div>
+    </div>
   </div>
 </section>
 
 <section id="endorsements">
   <div class="container">
     <h2 class="section-title fade-in">What leaders are saying</h2>
-
-    <blockquote class="endorsement endorsement-border fade-in">
-      "The old advice to simply 'bounce back' is a recipe for extinction. Stuart J. Green's REGENERATE provides the essential framework to leap forward and build the future you desire and deserve."
-      <footer>
-        <strong>Peter H. Diamandis, MD</strong>
-        Founder and Executive Chairman, XPRIZE Foundation. Founder, Singularity University and Abundance360. Author of <em>Abundance</em>, <em>BOLD</em>, and <em>The Future is Faster Than You Think</em>.
-      </footer>
-    </blockquote>
-
-    <blockquote class="endorsement endorsement-border fade-in">
-      "Stuart J. Green has captured this truth brilliantly. His framework moves beyond the tired rhetoric of resilience and provides a clear, actionable methodology for genuine institutional renewal. This book should be required reading for every consultant and consulting leader who wants to deliver lasting value, not just temporary fixes."
-      <footer>
-        <strong>Professor Joe O'Mahoney</strong>
-        CEO, Equity Sherpa Ltd. Twenty years studying and advising consulting firms.
-      </footer>
-    </blockquote>
-
-    <blockquote class="endorsement fade-in">
-      "Building mindful, responsible AI has taught me that the hardest problems aren't technological, they're human. I've worked with Stuart and watched him help leaders dismantle those human barriers. The Regenerate Leap is the missing piece: a rigorous, humane playbook for leading with courage through profound technological change. I wish I'd had this book a decade ago."
-      <footer>
-        <strong>Ahmer Inam</strong>
-        Founder and CEO, Cognisee, PBC.
-      </footer>
-    </blockquote>
+    <div class="endorsement-cards">
+      <div class="endorsement-card fade-in">
+        <p class="quote">"The old advice to simply 'bounce back' is a recipe for extinction."</p>
+        <div class="attr">
+          <strong>Peter H. Diamandis, MD</strong>
+          <span>Founder and Executive Chairman, XPRIZE Foundation. Founder, Singularity University and Abundance360.</span>
+        </div>
+      </div>
+      <div class="endorsement-card fade-in" style="animation-delay: 0.1s;">
+        <p class="quote">"His framework moves beyond the tired rhetoric of resilience and provides a clear, actionable methodology for genuine institutional renewal."</p>
+        <div class="attr">
+          <strong>Professor Joe O'Mahoney</strong>
+          <span>CEO, Equity Sherpa Ltd. Twenty years studying and advising consulting firms.</span>
+        </div>
+      </div>
+      <div class="endorsement-card fade-in" style="animation-delay: 0.2s;">
+        <p class="quote">"The Regenerate Leap is the missing piece: a rigorous, humane playbook for leading with courage through profound technological change."</p>
+        <div class="attr">
+          <strong>Ahmer Inam</strong>
+          <span>Founder and CEO, Cognisee, PBC.</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -294,8 +414,9 @@
   </div>
 </section>
 
-<section id="commentary">
+<section id="commentary" class="media-kit">
   <div class="container">
+    <span class="kit-label fade-in">Media kit</span>
     <h2 class="section-title fade-in">Available for expert commentary</h2>
     <p class="fade-in">Stuart J. Green is available for interviews, bylined articles, expert commentary, and panel contributions on the following topics:</p>
     <div class="topics">
@@ -343,10 +464,26 @@
   </div>
 </section>
 
+<section id="speaking" class="media-kit">
+  <div class="container">
+    <h2 class="section-title fade-in">Speaking and Keynotes</h2>
+    <p class="fade-in">Stuart J. Green is available for executive and conference audiences, bringing the diagnostic lens of the REGENERATE framework to leaders navigating compound disruption.</p>
+    <div class="tags fade-in">
+      <span>Keynote</span>
+      <span>Panel</span>
+      <span>In-studio broadcast</span>
+      <span>Remote interview</span>
+      <span>Pre-recorded commentary</span>
+      <span>Executive workshop</span>
+    </div>
+    <a href="#contact" class="btn fade-in">Enquire about speaking</a>
+  </div>
+</section>
+
 <section id="contact">
   <div class="container">
     <h2 class="section-title fade-in">Contact</h2>
-    <p class="fade-in">For media enquiries, speaking availability, and interview scheduling:</p>
+    <p class="fade-in">For media enquiries, keynote and speaking availability, advisory engagements, and interview scheduling:</p>
     <div class="contact-grid fade-in">
       <div class="row"><span class="label">Email</span><a href="mailto:stuart@bluegreenadvisors.com">stuart@bluegreenadvisors.com</a></div>
       <div class="row"><span class="label">Book</span><a href="https://www.regenerateleap.com/" target="_blank" rel="noopener">regenerateleap.com</a></div>
@@ -367,8 +504,8 @@
       <ul>
         <li><a href="https://bluegreenadvisors.com" target="_blank" rel="noopener">Blue-Green Advisors</a></li>
         <li><a href="https://www.regenerateleap.com/" target="_blank" rel="noopener">The Regenerate Leap</a></li>
-        <li><a href="https://theregenerateframework.com/" target="_blank" rel="noopener">The Structural Misfit Diagnosis</a></li>
-        <li><a href="https://www.cognisee.ai/" target="_blank" rel="noopener">Cognisee, PBC</a></li>
+        <li><a href="https://theregenerateframework.com/" target="_blank" rel="noopener">The Regenerate Framework</a></li>
+        <li><a href="https://www.cognisee.ai/" target="_blank" rel="noopener">Cognisee PBC</a></li>
         <li><a href="https://regenerateos.com" target="_blank" rel="noopener">RegenerateOS</a></li>
       </ul>
     </div>
@@ -384,6 +521,21 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  var toggle = document.getElementById('navToggle');
+  var menu = document.getElementById('navMenu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', function() {
+      var open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
   var els = document.querySelectorAll('.fade-in');
   if ('IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function(entries) {
