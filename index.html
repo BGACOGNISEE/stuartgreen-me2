@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stuart J. Green | Operating Model Advisor &amp; Author | The Regenerate Leap</title>
-<meta name="description" content="Stuart J. Green helps CEOs and boards redesign operating models built for conditions that no longer exist. Author of The Regenerate Leap. Founder, Blue-Green Advisors.">
+<meta name="description" content="Stuart J. Green helps boards and CEOs diagnose why their operating model has structurally failed, and design what replaces it. Author of The Regenerate Leap.">
 <meta name="keywords" content="operating model transformation, organisational redesign, leadership through disruption, regenerate framework, anti-resilience strategist, Stuart J. Green">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
     --line: #E5E3DC;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
   body {
     font-family: 'Source Serif Pro', Georgia, serif;
     color: var(--ink);
@@ -35,16 +35,16 @@
   .container { max-width: 960px; margin: 0 auto; padding: 0 32px; }
 
   nav.top {
-    position: sticky; top: 0; background: var(--ground);
-    border-bottom: 1px solid var(--line); z-index: 100; padding: 16px 0;
+    position: sticky; top: 0; background: rgba(248,248,246,0.92); backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--line); z-index: 100; padding: 14px 0;
   }
   nav.top .container { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-  nav.top .brand { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--ink); }
-  nav.top .nav-right { display: flex; align-items: center; gap: 24px; }
-  nav.top ul { list-style: none; display: flex; gap: 24px; flex-wrap: wrap; }
-  nav.top ul a { color: var(--ink); font-size: 15px; text-decoration: none; }
+  nav.top .brand { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--ink); white-space: nowrap; }
+  nav.top .nav-right { display: flex; align-items: center; gap: 20px; }
+  nav.top ul { list-style: none; display: flex; gap: 18px; }
+  nav.top ul a { color: var(--ink); font-size: 14px; text-decoration: none; white-space: nowrap; }
   nav.top ul a:hover { color: var(--teal); }
-  nav.top .nav-cta { display: inline-block; padding: 8px 16px; background: var(--teal); color: var(--ground); font-size: 14px; font-weight: 600; border-radius: 2px; text-decoration: none; transition: background 0.2s; }
+  nav.top .nav-cta { display: inline-block; padding: 8px 14px; background: var(--teal); color: var(--ground); font-size: 13px; font-weight: 600; border-radius: 2px; text-decoration: none; transition: background 0.2s; white-space: nowrap; }
   nav.top .nav-cta:hover { background: var(--ink); text-decoration: none; }
   nav.top .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
   nav.top .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--ink); }
@@ -54,24 +54,22 @@
   .nav-menu a { color: var(--ink); font-size: 15px; }
   .nav-menu .nav-cta { display: inline-block; padding: 8px 16px; background: var(--teal); color: var(--ground); font-size: 14px; font-weight: 600; border-radius: 2px; }
 
-  section.hero { padding: 80px 0 96px; }
-  .hero-top { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; margin-bottom: 56px; }
+  section.hero { padding: 80px 0 88px; }
+  .hero-top { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
   .hero-photo { width: 260px; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
   .hero-eyebrow { font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); display: block; margin-bottom: 16px; }
-  .hero h1 { font-size: 56px; margin-bottom: 24px; letter-spacing: -0.02em; line-height: 1.1; }
-  .hero-bio { font-size: 19px; color: var(--grey); max-width: 640px; margin-bottom: 0; }
-  .hero-subhead { font-size: 30px; margin-bottom: 32px; }
+  .hero h1 { font-size: 52px; margin-bottom: 24px; letter-spacing: -0.02em; line-height: 1.08; max-width: 14ch; }
+  .hero-bio { font-size: 21px; color: var(--grey); max-width: 600px; margin-bottom: 0; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center; margin-top: 36px; }
+  .btn-text { color: var(--teal); font-weight: 600; font-size: 16px; }
 
-  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .card { background: #FFFFFF; border-top: 3px solid var(--teal); border-radius: 2px; padding: 24px; display: flex; flex-direction: column; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
   .card .card-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); display: block; margin-bottom: 12px; }
   .card h3 { font-size: 20px; margin-bottom: 12px; line-height: 1.3; }
   .card .card-desc { font-size: 15px; color: var(--grey); margin-bottom: 12px; }
   .card .card-tag { font-size: 13px; color: var(--grey); margin-bottom: 16px; }
   .card .card-link { margin-top: auto; color: var(--teal); font-weight: 600; font-size: 15px; }
-
-  .hero-footer-nav { display: flex; flex-wrap: wrap; gap: 12px; font-size: 15px; color: var(--grey); }
-  .hero-footer-nav a { font-size: 15px; }
 
   section.press { padding: 48px 0; border-top: 1px solid var(--line); }
   .press-overline { font-family: 'Source Serif Pro', Georgia, serif; font-weight: 400; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); display: block; margin-bottom: 24px; }
@@ -93,17 +91,28 @@
   .media-kit .kit-label { font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); display: block; margin-bottom: 12px; }
 
   section { padding: 80px 0; border-top: 1px solid var(--line); }
-  section h2.section-title { font-size: 36px; margin-bottom: 32px; }
+  section h2.section-title { font-size: 36px; margin-bottom: 32px; max-width: 18ch; }
+  section h2.section-title.wide { max-width: none; }
   section p { margin-bottom: 20px; max-width: 720px; }
   section p:last-child { margin-bottom: 0; }
 
-  .method-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 40px 0; }
+  .section-intro { margin-bottom: 32px; }
+
+  .method-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 0 0 32px; }
   .method-card { background: #FFFFFF; border-top: 3px solid var(--teal); border-radius: 2px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
   .method-card h4 { font-size: 24px; color: var(--teal); margin-bottom: 12px; letter-spacing: 1px; }
   .method-card p { font-size: 15px; max-width: none; margin-bottom: 0; }
 
   section.framework { background: #FFFFFF; }
-  .btn-group { display: flex; flex-wrap: wrap; gap: 16px; }
+
+  /* Read more toggles */
+  .readmore { margin-top: 4px; }
+  .readmore > summary { list-style: none; cursor: pointer; color: var(--teal); font-weight: 600; font-size: 16px; display: inline-block; }
+  .readmore > summary::-webkit-details-marker { display: none; }
+  .readmore > summary::after { content: " \2192"; }
+  .readmore[open] > summary { margin-bottom: 20px; }
+  .readmore[open] > summary::after { content: " \2191"; }
+  .readmore .readmore-body p:first-child { margin-top: 0; }
 
   .book-grid { display: grid; grid-template-columns: 240px 1fr; gap: 40px; align-items: start; margin-bottom: 32px; }
   .book-cover { display: block; width: 100%; max-width: 240px; height: auto; border-radius: 2px; box-shadow: 0 4px 14px rgba(0,0,0,0.12); }
@@ -114,10 +123,16 @@
   .coverage-block { padding-top: 24px; border-top: 1px solid var(--line); }
   .coverage-block .label { font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--grey); margin-bottom: 16px; display: block; }
 
-  .btn { display: inline-block; padding: 12px 28px; background: var(--teal); color: var(--ground); border: none; font-family: 'Source Serif Pro', serif; font-size: 16px; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+  .btn { display: inline-block; padding: 14px 30px; background: var(--teal); color: var(--ground); border: none; font-family: 'Source Serif Pro', serif; font-size: 16px; font-weight: 600; text-decoration: none; transition: background 0.2s; border-radius: 2px; }
   .btn:hover { background: var(--ink); text-decoration: none; }
-  .btn-outline { display: inline-block; padding: 12px 28px; border: 1px solid var(--teal); color: var(--teal); font-family: 'Source Serif Pro', serif; font-size: 16px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
-  .btn-outline:hover { background: var(--teal); color: var(--ground); text-decoration: none; }
+  .btn-outline { display: inline-block; padding: 10px 22px; border: 1px solid var(--line); color: var(--ink); font-family: 'Source Serif Pro', serif; font-size: 15px; font-weight: 600; text-decoration: none; transition: all 0.2s; border-radius: 2px; }
+  .btn-outline:hover { border-color: var(--teal); color: var(--teal); text-decoration: none; }
+  .btn-group { display: flex; flex-wrap: wrap; gap: 16px; }
+
+  section.cta-band { background: var(--teal-dark); border-top: none; text-align: center; padding: 72px 0; }
+  .cta-band h2 { font-size: 34px; color: #FFFFFF; margin-bottom: 28px; max-width: 20ch; margin-left: auto; margin-right: auto; }
+  .cta-band .btn { background: #FFFFFF; color: var(--teal-dark); }
+  .cta-band .btn:hover { background: var(--ground); color: var(--ink); }
 
   .endorsement-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .endorsement-card { background: #FFFFFF; border: 1px solid var(--line); border-radius: 2px; padding: 24px; display: flex; flex-direction: column; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
@@ -150,17 +165,18 @@
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  .fade-in {
-    opacity: 0;
-    animation: fadeUp 0.6s ease forwards;
-  }
-  .fade-in.visible {
-    opacity: 1;
+  .fade-in { opacity: 0; animation: fadeUp 0.6s ease forwards; }
+  .fade-in.visible { opacity: 1; }
+
+  @media (max-width: 900px) {
+    nav.top .nav-right ul, nav.top .nav-right .nav-cta { display: none; }
+    nav.top .nav-toggle { display: flex; }
+    .nav-menu.open ul { display: flex; }
   }
 
   @media (max-width: 720px) {
-    .hero h1 { font-size: 40px; }
-    .hero-subhead { font-size: 24px; }
+    .hero h1 { font-size: 38px; max-width: none; }
+    .hero-bio { font-size: 18px; }
     .hero-top { grid-template-columns: 1fr; gap: 32px; }
     .hero-photo { width: 200px; }
     .cards { grid-template-columns: 1fr; }
@@ -170,14 +186,12 @@
     .book-cover { max-width: 220px; }
     .topics { grid-template-columns: 1fr; }
     footer.site-footer .container { grid-template-columns: 1fr; }
-    nav.top .nav-right ul, nav.top .nav-right .nav-cta { display: none; }
-    nav.top .nav-toggle { display: flex; }
-    .nav-menu.open ul { display: flex; }
     .stats-grid { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
     .stat .number { font-size: 30px; }
     section { padding: 56px 0; }
-    section.hero { padding: 56px 0 64px; }
+    section.hero { padding: 48px 0 56px; }
     section h2.section-title { font-size: 28px; }
+    .cta-band h2 { font-size: 26px; }
     .soundbites blockquote { font-size: 22px; }
   }
 </style>
@@ -189,15 +203,14 @@
     <div class="brand">Stuart J. Green</div>
     <div class="nav-right">
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#method">Method</a></li>
-        <li><a href="#book">Book</a></li>
-        <li><a href="#research">Research</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#framework">The Framework</a></li>
+        <li><a href="#book">The Book</a></li>
         <li><a href="#advisory">Advisory</a></li>
-        <li><a href="#commentary">Commentary</a></li>
         <li><a href="#speaking">Speaking</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#contact" class="nav-cta">Get in Touch</a>
+      <a href="#diagnostic" class="nav-cta">Take the 5-minute diagnostic</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -206,60 +219,96 @@
   <div class="nav-menu" id="navMenu">
     <div class="container">
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#method">Method</a></li>
-        <li><a href="#book">Book</a></li>
-        <li><a href="#research">Research</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#framework">The Framework</a></li>
+        <li><a href="#book">The Book</a></li>
         <li><a href="#advisory">Advisory</a></li>
-        <li><a href="#commentary">Commentary</a></li>
         <li><a href="#speaking">Speaking</a></li>
-        <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#diagnostic" class="nav-cta">Take the 5-minute diagnostic</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<section class="hero">
+<section class="hero" id="home">
   <div class="container">
     <div class="hero-top">
       <div>
-        <span class="hero-eyebrow fade-in">Anti-resilience strategist</span>
-        <h1 class="fade-in" style="animation-delay: 0.1s;">Stuart J. Green</h1>
-        <p class="hero-bio fade-in" style="animation-delay: 0.2s;">Stuart J. Green works with institutional leaders navigating irreversible change, applying 30 years of marine systems science to organisations where the previous model is structurally obsolete.</p>
+        <span class="hero-eyebrow fade-in">Stuart J. Green &middot; Operating Model Advisor</span>
+        <h1 class="fade-in" style="animation-delay: 0.1s;">The baseline has shifted. There is nothing to bounce back to.</h1>
+        <p class="hero-bio fade-in" style="animation-delay: 0.2s;">Stuart J. Green helps boards and CEOs diagnose why their operating model has structurally failed, and design what replaces it.</p>
+        <div class="hero-actions fade-in" style="animation-delay: 0.3s;">
+          <a href="#diagnostic" class="btn">Take the 5-minute diagnostic</a>
+          <a href="#book" class="btn-text">Read about the book &rarr;</a>
+        </div>
       </div>
       <img class="hero-photo fade-in" style="animation-delay: 0.15s;" src="stuart_hero.jpg" alt="Stuart J. Green">
     </div>
+  </div>
+</section>
 
-    <h2 class="hero-subhead fade-in" style="animation-delay: 0.25s;">Where you are heading</h2>
+<section class="framework" id="framework">
+  <div class="container">
+    <h2 class="section-title wide fade-in">A three-phase methodology, stress-tested where failure had real consequences.</h2>
+    <div class="method-cards">
+      <div class="method-card fade-in">
+        <h4>RAZE</h4>
+        <p>The strategic decommissioning of what no longer fits. Most organisations cannot grow because they have nothing left to grow with. RAZE recovers that capacity.</p>
+      </div>
+      <div class="method-card fade-in" style="animation-delay: 0.1s;">
+        <h4>ENRICH</h4>
+        <p>Composting what was cleared into the substrate that supports what comes next: governance, capacity, relationships, capital. This is the phase most organisations skip.</p>
+      </div>
+      <div class="method-card fade-in" style="animation-delay: 0.2s;">
+        <h4>GROW</h4>
+        <p>The design and resourcing of the organisation's next operating model: a new form fitted to current and emerging conditions.</p>
+      </div>
+    </div>
+    <details class="readmore fade-in">
+      <summary>Read more about the method</summary>
+      <div class="readmore-body">
+        <p>The REGENERATE framework emerged from two converging lines of inquiry: the science of how ecological systems regenerate after catastrophic disturbance, and three decades of direct observation of how institutions, SMEs, and governance systems either redesign under compound pressure or fail.</p>
+        <p>It does not borrow metaphors from nature. It translates the structural patterns that natural systems have stress-tested over 3.8 billion years into enforceable strategy for organisations facing irreversible change. Its core principles, including strategic decommissioning, signal extraction, and baseline shift recognition, emerged from observing what actually works when the old model has structurally failed and the organisation must design what replaces it.</p>
+      </div>
+    </details>
+  </div>
+</section>
 
+<section id="audience">
+  <div class="container">
+    <h2 class="section-title fade-in">Who this is for</h2>
     <div class="cards">
       <div class="card fade-in">
         <span class="card-label">For boards and chief executives</span>
         <h3>The Operating Model Fitness Index</h3>
         <p class="card-desc">A thirteen-question diagnostic that scores the misfit between your operating model and the conditions you now face. The result is structural data your board chair can read.</p>
         <p class="card-tag">13 questions &middot; 5 minutes &middot; on your phone</p>
-        <a href="https://theregenerateframework.com" target="_blank" rel="noopener" class="card-link">Access the assessment &rarr;</a>
+        <a href="#diagnostic" class="card-link">Take the diagnostic &rarr;</a>
       </div>
       <div class="card fade-in" style="animation-delay: 0.1s;">
         <span class="card-label">For readers</span>
         <h3><em>The Regenerate Leap</em></h3>
         <p class="card-desc">The book. What comes next for leaders when the previous model has structurally failed and there is no prior state worth restoring.</p>
-        <a href="https://www.regenerateleap.com" target="_blank" rel="noopener" class="card-link">Read about the book &rarr;</a>
+        <a href="#book" class="card-link">Read about the book &rarr;</a>
       </div>
       <div class="card fade-in" style="animation-delay: 0.2s;">
         <span class="card-label">For institutions</span>
         <h3>Blue-Green Advisors</h3>
         <p class="card-desc">Advisory for organisations facing compound disruption across the ocean economy and the wider institutional landscape.</p>
-        <a href="https://bluegreenadvisors.com" target="_blank" rel="noopener" class="card-link">Inquire about advisory &rarr;</a>
+        <a href="#advisory" class="card-link">About the advisory &rarr;</a>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="hero-footer-nav fade-in">
-      <a href="https://theregenerateframework.com" target="_blank" rel="noopener">The Regenerate Framework</a>
-      <span>&middot;</span>
-      <a href="https://www.regenerateleap.com" target="_blank" rel="noopener">The Regenerate Leap</a>
-      <span>&middot;</span>
-      <a href="https://bluegreenadvisors.com" target="_blank" rel="noopener">Blue-Green Advisors</a>
+<section class="framework" id="diagnostic">
+  <div class="container">
+    <span class="kit-label fade-in">The Operating Model Fitness Index</span>
+    <h2 class="section-title fade-in">A five-minute diagnostic your board chair can act on.</h2>
+    <p class="fade-in">Thirteen questions that score the misfit between your operating model and the conditions you now face. One diagnosis both the CEO and board chair can act on, forwarded to the chair in one click, governance-framed.</p>
+    <div class="btn-group fade-in">
+      <a href="https://theregenerateframework.com" target="_blank" rel="noopener" class="btn">Take the 5-minute diagnostic</a>
     </div>
   </div>
 </section>
@@ -291,53 +340,27 @@
 <section id="about">
   <div class="container">
     <h2 class="section-title fade-in">Biography</h2>
-    <p class="fade-in">Stuart J. Green works with institutional leaders navigating irreversible change, applying three decades of marine systems science to organisations where the previous model is structurally obsolete. He helps CEOs and boards diagnose why their operating model no longer works in current conditions, and what needs to change, drawing on experience from major development banks navigating systemic reform to collapsed fishing communities and SMEs across Asia-Pacific.</p>
-    <p class="fade-in">He helps organisations redesign models built for conditions that no longer exist, identifying outdated assumptions, incentives that reward the wrong behaviour, and governance structures that slow down decision-making. His approach enables organisations to reset direction and design what comes next.</p>
+    <p class="fade-in">Stuart J. Green works with institutional leaders navigating irreversible change, applying three decades of marine systems science to organisations where the previous model is structurally obsolete. He helps CEOs and boards diagnose why their operating model no longer works in current conditions, and design what comes next.</p>
+    <details class="readmore fade-in">
+      <summary>Read more</summary>
+      <div class="readmore-body">
+        <p>His experience spans major development banks navigating systemic reform to collapsed fishing communities and SMEs across Asia-Pacific. He identifies outdated assumptions, incentives that reward the wrong behaviour, and governance structures that slow down decision-making, helping organisations reset direction and design what replaces what has stopped working.</p>
+      </div>
+    </details>
   </div>
 </section>
 
 <section id="why">
   <div class="container">
     <h2 class="section-title fade-in">Why this methodology is different</h2>
-    <p class="fade-in">Most operating model methodologies are developed in business schools and consulting firms, then tested on clients. Stuart's was forged in the opposite direction. He spent a decade embedded in coastal communities and SMEs across Asia-Pacific where entire marine economies had become structurally unviable. He watched systems collapse in real time: fishing communities that had sustained families for generations, small enterprises that could not absorb compound shocks, governance structures that accelerated the failure they were designed to prevent.</p>
-    <p class="fade-in">That direct observation of structural failure at the point of collapse is what separates Stuart's diagnostic lens from theory developed in a seminar room. He then scaled those patterns into institutional design at the global level, advising the World Bank, the Asian Development Bank (contributing to a USD 6 billion Oceans and Blue Economy Plan 2030), and the United Kingdom Government's GBP 400 million Blue Planet Fund.</p>
-    <p class="fade-in">Across these roles, he mobilised over USD 500 million into systemic reform and designed governance systems spanning more than 100 large-scale programmes across six Asia-Pacific jurisdictions. Every framework was tested in complex, politically sensitive environments where failure carried real economic and social consequences. The methodology works because it was built where getting the diagnosis wrong meant livelihoods collapsed, not where it meant a quarterly target was missed.</p>
-  </div>
-</section>
-
-<section id="method">
-  <div class="container">
-    <h2 class="section-title fade-in">The methodology</h2>
-    <p class="fade-in">The REGENERATE framework emerged from two converging lines of inquiry: the science of how ecological systems regenerate after catastrophic disturbance, and three decades of direct observation of how institutions, SMEs, and governance systems either redesign under compound pressure or fail.</p>
-    <p class="fade-in">The framework does not borrow metaphors from nature. It translates the structural patterns that natural systems have stress-tested over 3.8 billion years into enforceable strategy for organisations facing irreversible change. It has three phases.</p>
-
-    <div class="method-cards">
-      <div class="method-card fade-in">
-        <h4>RAZE</h4>
-        <p>The strategic decommissioning of what no longer fits. RAZE is the deliberate clearing of capacity that has been locked into obsolete commitments. Most organisations cannot grow because they have nothing left to grow with. RAZE recovers that capacity.</p>
+    <p class="fade-in">Most operating model methodologies are developed in business schools and consulting firms, then tested on clients. Stuart's was forged in the opposite direction, embedded for a decade in coastal communities and SMEs across Asia-Pacific where entire marine economies had become structurally unviable.</p>
+    <details class="readmore fade-in">
+      <summary>Read more</summary>
+      <div class="readmore-body">
+        <p>He watched systems collapse in real time: fishing communities that had sustained families for generations, small enterprises that could not absorb compound shocks, governance structures that accelerated the failure they were designed to prevent. That direct observation of structural failure at the point of collapse is what separates Stuart's diagnostic lens from theory developed in a seminar room.</p>
+        <p>He then scaled those patterns into institutional design at the global level, advising the World Bank, the Asian Development Bank (contributing to a USD 6 billion Oceans and Blue Economy Plan 2030), and the United Kingdom Government's GBP 400 million Blue Planet Fund. Across these roles, he mobilised over USD 500 million into systemic reform and designed governance systems spanning more than 100 large-scale programmes across six Asia-Pacific jurisdictions. The methodology works because it was built where getting the diagnosis wrong meant livelihoods collapsed, not where it meant a quarterly target was missed.</p>
       </div>
-      <div class="method-card fade-in" style="animation-delay: 0.1s;">
-        <h4>ENRICH</h4>
-        <p>Composting what was cleared into the substrate that supports what comes next: governance, capacity, relationships, capital. ENRICH is the phase most organisations skip. The new model fails because the conditions for it have not been built.</p>
-      </div>
-      <div class="method-card fade-in" style="animation-delay: 0.2s;">
-        <h4>GROW</h4>
-        <p>The design and resourcing of the organisation's next operating model. A new form fitted to current and emerging conditions, built on the substrate that ENRICH prepared and the capacity that RAZE recovered.</p>
-      </div>
-    </div>
-
-    <p class="fade-in">The framework was tested under the most demanding conditions before it was applied to corporate and governance contexts. Its core principles, including strategic decommissioning (what you stop doing matters more than what you start), signal extraction, and baseline shift recognition, emerged from observing what actually works when the old model has structurally failed and the organisation must design what replaces it.</p>
-  </div>
-</section>
-
-<section id="framework" class="framework">
-  <div class="container">
-    <h2 class="section-title fade-in">The Regenerate Framework</h2>
-    <p class="fade-in">The Operating Model Fitness Index is a thirteen-question diagnostic that scores the misfit between your operating model and the conditions you now face. Five minutes. Thirteen questions. One diagnosis both the CEO and board chair can act on, forwarded to the chair in one click, governance-framed.</p>
-    <div class="btn-group fade-in">
-      <a href="https://theregenerateframework.com" target="_blank" rel="noopener" class="btn">Start the Diagnostic</a>
-      <a href="https://theregenerateframework.com" target="_blank" rel="noopener" class="btn-outline">Read the method</a>
-    </div>
+    </details>
   </div>
 </section>
 
@@ -349,7 +372,7 @@
       <div class="book-text">
         <p class="fade-in"><em>The Regenerate Leap: How Leaders Transform Crisis into Enduring Growth</em> is for CEOs navigating technological or industry upheaval, founders facing structural setbacks, and executives leading teams through compound disruption.</p>
         <p class="fade-in">The book provides the REGENERATE framework: a three-phase methodology (RAZE, ENRICH, GROW) built on the science of how natural systems regenerate after catastrophic disturbance. It shows how to use the crisis itself to build a structurally stronger model, rather than attempting to restore conditions that no longer exist.</p>
-        <a href="https://www.regenerateleap.com/" target="_blank" rel="noopener" class="btn fade-in">Visit regenerateleap.com</a>
+        <a href="https://www.regenerateleap.com/" target="_blank" rel="noopener" class="btn-outline fade-in">Visit regenerateleap.com</a>
       </div>
     </div>
     <div class="coverage-block fade-in">
@@ -399,9 +422,14 @@
 <section id="research">
   <div class="container">
     <h2 class="section-title fade-in">The science underneath the method</h2>
-    <p class="fade-in">The methodology draws on three decades of peer-reviewed research and institutional reports in marine systems science, fisheries governance, and ecosystem-based management. Stuart is the author or co-author of more than 36 published works with over 580 citations and an h-index of 11, spanning marine protected area design, climate-informed fisheries management, coastal governance, and active management of complex ecological systems.</p>
-    <p class="fade-in">Selected venues include <em>Marine Policy</em>, <em>Conservation and Society</em>, <em>Biodiversity and Conservation</em>, <em>Ocean and Coastal Management</em>, and <em>Conservation Science and Practice</em>.</p>
-    <p class="fade-in">A complete publications list is available on request.</p>
+    <p class="fade-in">The methodology draws on three decades of peer-reviewed research in marine systems science, fisheries governance, and ecosystem-based management. Stuart is the author or co-author of more than 36 published works with over 580 citations and an h-index of 11.</p>
+    <details class="readmore fade-in">
+      <summary>Read more</summary>
+      <div class="readmore-body">
+        <p>His research spans marine protected area design, climate-informed fisheries management, coastal governance, and active management of complex ecological systems. Selected venues include <em>Marine Policy</em>, <em>Conservation and Society</em>, <em>Biodiversity and Conservation</em>, <em>Ocean and Coastal Management</em>, and <em>Conservation Science and Practice</em>.</p>
+        <p>A complete publications list is available on request.</p>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -410,7 +438,7 @@
     <h2 class="section-title fade-in">Blue-Green Advisors</h2>
     <p class="fade-in">Stuart J. Green is the founder of Blue-Green Advisors (BGA), an advisory firm that diagnoses structural failure in organisations and designs the systems to replace what has stopped working. He is also UK and Europe lead at Cognisee, PBC.</p>
     <p class="fade-in">BGA advises across the spectrum, from SMEs facing market disruption to multilateral institutions navigating systemic reform, applying the same diagnostic methodology at every scale.</p>
-    <a href="https://bluegreenadvisors.com" target="_blank" rel="noopener" class="btn fade-in">Visit bluegreenadvisors.com</a>
+    <a href="https://bluegreenadvisors.com" target="_blank" rel="noopener" class="btn-outline fade-in">Visit bluegreenadvisors.com</a>
   </div>
 </section>
 
@@ -476,7 +504,7 @@
       <span>Pre-recorded commentary</span>
       <span>Executive workshop</span>
     </div>
-    <a href="#contact" class="btn fade-in">Enquire about speaking</a>
+    <a href="#contact" class="btn-outline fade-in">Enquire about speaking</a>
   </div>
 </section>
 
@@ -490,6 +518,13 @@
       <div class="row"><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/bluegreenadvisors/" target="_blank" rel="noopener">Stuart J. Green</a></div>
     </div>
     <p class="fade-in" style="margin-top: 32px;">Stuart is available for in-studio broadcast, remote interview, pre-recorded commentary, and panel contributions. For urgent media requests, contact the PR team directly.</p>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2 class="fade-in">Find out whether your operating model still fits the conditions you face.</h2>
+    <a href="https://theregenerateframework.com" target="_blank" rel="noopener" class="btn fade-in">Take the 5-minute diagnostic</a>
   </div>
 </section>
 
