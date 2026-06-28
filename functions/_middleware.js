@@ -1,0 +1,9 @@
+export async function onRequest(context) {
+    const url = new URL(context.request.url);
+    if (url.hostname === "stuartjgreen.me") {
+      url.hostname = "www.stuartjgreen.me";
+      return Response.redirect(url.toString(), 301);
+    }
+    return context.next();
+  }
+  
