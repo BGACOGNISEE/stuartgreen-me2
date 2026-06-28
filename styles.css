@@ -137,12 +137,28 @@ header.nav { position: sticky; top: 0; z-index: 50; background: rgba(246, 241, 2
 
 /* Press */
 .press { background: var(--paper); }
-.press .logos { display: flex; flex-wrap: wrap; gap: 22px 42px; justify-content: center; align-items: center; }
+.press .logos {
+  display: flex; flex-wrap: wrap; gap: 26px 54px;
+  justify-content: center; align-items: center;
+  background: #fff; border: 1px solid var(--line); border-radius: 16px;
+  padding: 30px 40px; max-width: 960px; margin: 0 auto;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
 .press .logos a { display: inline-flex; align-items: center; }
-.press .logos img { height: 26px; width: auto; opacity: 0.9; transition: opacity 0.25s ease; }
-.press .logos a:hover img { opacity: 1; }
-.press .logos img.logo-fbu { height: 46px; }
-@media (max-width: 520px) { .press .logos { gap: 18px 28px; } .press .logos img { height: 22px; } .press .logos img.logo-fbu { height: 40px; } }
+.press .logos img { width: auto; object-fit: contain; }
+.press .logos img.logo-fc { height: 26px; }
+.press .logos img.logo-observer { height: 22px; }
+.press .logos img.logo-ceoworld { height: 34px; }
+.press .logos img.logo-forbes { height: 23px; }
+.press .logos img.logo-fbu { height: 44px; }
+@media (max-width: 640px) {
+  .press .logos { gap: 22px 32px; padding: 24px 22px; }
+  .press .logos img.logo-fc { height: 22px; }
+  .press .logos img.logo-observer { height: 19px; }
+  .press .logos img.logo-ceoworld { height: 29px; }
+  .press .logos img.logo-forbes { height: 20px; }
+  .press .logos img.logo-fbu { height: 38px; }
+}
 
 /* Voices */
 .voices { background: var(--paper-2); }
