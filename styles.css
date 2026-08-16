@@ -217,6 +217,10 @@ section p:last-child { margin-bottom: 0; }
 .soundbites blockquote { font-family: 'Spectral', serif; font-size: 26px; line-height: 1.4; padding: 24px 0; border-bottom: 1px solid var(--line); max-width: 800px; }
 .soundbites blockquote:last-child { border-bottom: none; }
 
+.book-tagline { font-size: 1.05rem; font-style: italic; color: var(--ember); margin: 4px 0 20px; font-family: var(--serif); }
+.get-book-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); display: block; margin-bottom: 10px; }
+.book-buy-block { display: flex; flex-direction: column; }
+.book-buy-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 .book-layout { display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: start; }
 .book-cover {
   width: 100%; height: auto; display: block; border-radius: 6px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
