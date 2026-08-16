@@ -1,0 +1,9 @@
+{
+  "name": "stuartgreen-me2",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "nav:check": "node check-nav-sync.mjs"
+  }
+}
