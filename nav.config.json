@@ -1,0 +1,23 @@
+{
+  "headerNav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Book", "href": "/book" },
+    { "label": "Writing", "href": "/writing" },
+    { "label": "Operating model misfit", "href": "/operating-model-misfit" },
+    { "label": "Media kit", "href": "/media-kit" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "footerNav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Book", "href": "/book" },
+    { "label": "Writing", "href": "/writing" },
+    { "label": "Operating model misfit", "href": "/operating-model-misfit" },
+    { "label": "Media kit", "href": "/media-kit" },
+    { "label": "Contact", "href": "/contact" },
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/in/bluegreenadvisors/", "external": true }
+  ],
+  "cta": {
+    "label": "Take the diagnostic",
+    "href": "https://theregenerateframework.com"
+  }
+}
