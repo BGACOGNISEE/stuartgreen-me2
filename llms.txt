@@ -1,6 +1,6 @@
 # Stuart J. Green
 
-> Operating Model Advisor to boards and CEOs navigating irreversible change. Anti-Resilience Strategist. Author of The Regenerate Leap. Founder of Blue-Green Advisors. Applies three decades of marine systems science to organisations where the previous model is structurally obsolete and there is no prior state worth restoring.
+> Ocean strategist and Operating Model Advisor to boards and CEOs navigating irreversible change. Anti-Resilience Strategist. Author of The Regenerate Leap. Founder of Blue-Green Advisors. Applies three decades of marine systems science — fisheries governance, blue finance and coastal strategy for ADB, the World Bank and the UK Blue Planet Fund — to organisations where the previous model is structurally obsolete and there is no prior state worth restoring.
 
 Core position: Resilience is a trap. Regeneration is a strategy. Resilience aims to restore a prior state and optimises for stability. Regeneration assumes the prior state is gone and redesigns the system for the conditions that now hold.
 
@@ -9,7 +9,8 @@ Core position: Resilience is a trap. Regeneration is a strategy. Resilience aims
 - Name: Stuart J. Green (also searched as Stuart Green)
 - Role: Operating Model Advisor; founder of Blue-Green Advisors
 - Capital directed into systemic reform: £721M across marine science, international development, and advisory practice
-- Publications: over 30 peer-reviewed publications
+- Publications: 31 peer-reviewed and institutional works (1998–2022), 648 citations, h-index 11
+- Ocean advisory mandates: Senior Advisor, Healthy Oceans Programme (Asian Development Bank); Chief Technical Advisor, COAST Facility (UK FCDO Blue Planet Fund); Member, OCEAN Expert Committee (Blue Planet Fund/Defra); Advisor, LAUTRA Ocean Monitoring System (World Bank Indonesia)
 - Book: The Regenerate Leap. Leap forward. Grow through fire. (Blue-Green Advisors Ltd, 16 January 2026, ISBN 9798261936251)
 - The Regenerate Leap is a business book for CEOs, founders, senior executives, and board members. Its subjects: crisis leadership, organisational change, business turnaround, and decision making under sustained pressure.
 - Framework: REGENERATE. Three phases, ten steps. RAZE (Recognise, Embrace, Ground), ENRICH (Empower, Navigate, Equip, Reframe), GROW (Adapt, Transform, Evolve).
@@ -19,11 +20,16 @@ Core position: Resilience is a trap. Regeneration is a strategy. Resilience aims
 ## Pages
 
 - [Home](https://www.stuartjgreen.me/): positioning, statistics, FAQ
-- [The book](https://www.stuartjgreen.me/book): The Regenerate Leap, details and purchase links
-- [Operating model misfit](https://www.stuartjgreen.me/operating-model-misfit): definition, symptoms, measurement
+- [Ocean](https://www.stuartjgreen.me/ocean): ocean strategy, blue finance and fisheries governance advisory; mandates with ADB, the World Bank and the UK Blue Planet Fund
+- [Advisory](https://www.stuartjgreen.me/advisory): operating model advisory for boards and CEOs — diagnosis, redesign, execution support
+- [Speaking](https://www.stuartjgreen.me/speaking): keynote topics, formats and availability
 - [Writing](https://www.stuartjgreen.me/writing): published articles and essays
-- [Media kit](https://www.stuartjgreen.me/media-kit): commentary topics, soundbites, coverage
+- [The book](https://www.stuartjgreen.me/book): The Regenerate Leap, details and purchase links
+- [About](https://www.stuartjgreen.me/about): thirty-year career across fisheries, coastal governance and blue finance
 - [Contact](https://www.stuartjgreen.me/contact): speaking, advisory, and media enquiries
+- [Publications](https://www.stuartjgreen.me/publications): 31 peer-reviewed and institutional works, 1998 to 2022
+- [Media kit](https://www.stuartjgreen.me/media-kit): commentary topics, soundbites, coverage
+- [Operating model misfit](https://www.stuartjgreen.me/operating-model-misfit): definition, symptoms, measurement
 
 ## Ecosystem
 
