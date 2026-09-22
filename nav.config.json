@@ -1,23 +1,26 @@
 {
   "headerNav": [
-    { "label": "Home", "href": "/" },
-    { "label": "Book", "href": "/book" },
+    { "label": "Work", "href": "/work" },
+    { "label": "Speaking", "href": "/speaking" },
     { "label": "Writing", "href": "/writing" },
-    { "label": "Operating model misfit", "href": "/operating-model-misfit" },
-    { "label": "Media kit", "href": "/media-kit" },
+    { "label": "Book", "href": "/book" },
+    { "label": "About", "href": "/about" },
     { "label": "Contact", "href": "/contact" }
   ],
   "footerNav": [
-    { "label": "Home", "href": "/" },
-    { "label": "Book", "href": "/book" },
+    { "label": "Work", "href": "/work" },
+    { "label": "Speaking", "href": "/speaking" },
     { "label": "Writing", "href": "/writing" },
-    { "label": "Operating model misfit", "href": "/operating-model-misfit" },
-    { "label": "Media kit", "href": "/media-kit" },
+    { "label": "Book", "href": "/book" },
+    { "label": "About", "href": "/about" },
     { "label": "Contact", "href": "/contact" },
+    { "label": "Publications", "href": "/publications" },
+    { "label": "Media kit", "href": "/media-kit" },
+    { "label": "Operating model misfit", "href": "/operating-model-misfit" },
     { "label": "LinkedIn", "href": "https://www.linkedin.com/in/bluegreenadvisors/", "external": true }
   ],
   "cta": {
-    "label": "Take the diagnostic",
-    "href": "https://theregenerateframework.com"
+    "label": "Enquire about an engagement",
+    "href": "https://bluegreenadvisors.com"
   }
 }

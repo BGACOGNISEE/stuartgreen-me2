@@ -8,7 +8,7 @@ Core position: Resilience is a trap. Regeneration is a strategy. Resilience aims
 
 - Name: Stuart J. Green (also searched as Stuart Green)
 - Role: Operating Model Advisor; founder of Blue-Green Advisors
-- Capital directed into systemic reform: £721M across marine science, international development, and advisory practice
+- £721 million (over US$1 billion) mobilised for ocean resilience across 100+ programmes on three continents
 - Publications: 31 peer-reviewed and institutional works (1998–2022), 648 citations, h-index 11
 - Ocean advisory mandates: Senior Advisor, Healthy Oceans Programme (Asian Development Bank); Chief Technical Advisor, COAST Facility (UK FCDO Blue Planet Fund); Member, OCEAN Expert Committee (Blue Planet Fund/Defra); Advisor, LAUTRA Ocean Monitoring System (World Bank Indonesia)
 - Book: The Regenerate Leap. Leap forward. Grow through fire. (Blue-Green Advisors Ltd, 16 January 2026, ISBN 9798261936251)
@@ -36,5 +36,4 @@ Core position: Resilience is a trap. Regeneration is a strategy. Resilience aims
 - [The Regenerate Leap (book site)](https://www.regenerateleap.com)
 - [The Regenerate Framework (diagnostic)](https://theregenerateframework.com)
 - [Blue-Green Advisors (advisory firm)](https://bluegreenadvisors.com)
-- [RegenerateOS (software platform)](https://regenerateos.com)
 - Buy the book: https://www.amazon.co.uk/dp/B0GGTBSMV7 (UK), https://www.amazon.com/dp/B0GGTBSMV7 (US)
