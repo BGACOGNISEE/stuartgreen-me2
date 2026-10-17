@@ -85,33 +85,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var form = document.getElementById('enquiryForm');
   if (form) {
-    form.addEventListener('submit', function(e) {
+    var selected = new URLSearchParams(window.location.search).get('type');
+    if (selected === 'speaking' || selected === 'media') selected = 'speaking-media';
+    if (['ocean','board-advisory','speaking-media','book','other'].includes(selected)) form.elements.enquiryType.value = selected;
+    var pending = false;
+    form.addEventListener('submit', async function(e) {
       e.preventDefault();
-      var name = (form.name.value || '').trim();
-      var email = (form.email.value || '').trim();
-      var org = (form.organisation.value || '').trim();
-      var type = form.enquiryType.value || 'Other';
-      trackEvent('enquiry_submit', {
-        enquiry_type: type.toLowerCase(),
-        method: 'mailto'
-      });
-      var message = (form.message.value || '').trim();
-      var subject = 'Website enquiry (' + type + ') from ' + (name || 'website');
-      var bodyLines = [
-        'Name: ' + name,
-        'Email: ' + email,
-        'Organisation: ' + org,
-        'Enquiry type: ' + type,
-        '',
-        message
-      ];
-      var href = 'mailto:stuart@bluegreenadvisors.com'
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body=' + encodeURIComponent(bodyLines.join('\n'));
-      window.location.href = href;
+      if (pending || !form.reportValidity()) return;
+      var fields = form.elements;
       var note = document.getElementById('formStatus');
-      if (note) {
-        note.textContent = 'Opening your email app to send this enquiry. If nothing happens, email stuart@bluegreenadvisors.com directly.';
+      if (!fields.name.value.trim() || !fields.organisation.value.trim() || !fields.message.value.trim()) {
+        note.textContent = 'Please enter your name, organisation and a message.';
+        return;
+      }
+      pending = true;
+      var button = form.querySelector('button[type="submit"]');
+      button.disabled = true;
+      form.setAttribute('aria-busy', 'true');
+      note.textContent = 'Sending your enquiry…';
+      var submittedMessage = fields.message.value;
+      try {
+        // Relative path keeps the static preview and Cloudflare Pages on the
+        // same-origin contact route. Production forwarding lives in functions/.
+        var response = await fetch(new URL(form.getAttribute('action'), document.baseURI), {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: fields.name.value, email: fields.email.value,
+            organisation: fields.organisation.value, enquiryType: fields.enquiryType.value,
+            message: fields.message.value, website: fields.website.value
+          }),
+          signal: AbortSignal.timeout(20000)
+        });
+        var result = await response.json();
+        if (response.status !== 202 || result.accepted !== true) throw new Error('not_accepted');
+        note.textContent = 'Thank you. Your enquiry has been submitted.';
+        if (fields.message.value === submittedMessage) fields.message.value = '';
+        trackEvent('enquiry_submit', { enquiry_type: fields.enquiryType.value, method: 'api' });
+      } catch (_) {
+        note.textContent = 'Your enquiry could not be sent. Please try again or use the direct email address below.';
+      } finally {
+        pending = false;
+        button.disabled = false;
+        form.setAttribute('aria-busy', 'false');
       }
     });
   }

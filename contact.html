@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<base href="/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Stuart J. Green</title>
@@ -36,9 +37,9 @@
     ],
     "givenName": "Stuart",
     "familyName": "Green",
-    "jobTitle": "Founder, Blue-Green Advisors; author of The Regenerate Leap",
-    "description": "Stuart J. Green works with institutional leaders navigating irreversible change, applying 30 years of marine systems science to organisations where the previous model is structurally obsolete. Founder of Blue-Green Advisors; author of The Regenerate Leap; former board member, Marine Stewardship Council and Blue Ventures (2021 to 2024); £721 million mobilised for ocean resilience.",
-    "disambiguatingDescription": "Marine scientist turned operating model advisor to boards and chief executives. Not to be confused with other people named Stuart Green in academic or development sector listings.",
+    "jobTitle": "Ocean strategist, institutional adviser and author",
+    "description": "Stuart J. Green advises on ocean strategy, governance, investment and institutional change. He founded the specialist ocean advisory firm Blue-Green Advisors in 2017 and is the author of The Regenerate Leap. He also advises boards and chief executives on operating models.",
+    "disambiguatingDescription": "Ocean strategist and marine scientist, founder of Blue-Green Advisors and author of The Regenerate Leap.",
     "url": "https://www.stuartjgreen.me/",
     "image": "https://www.stuartjgreen.me/stuart_hero.jpg",
     "knowsAbout": [
@@ -54,23 +55,11 @@
       "name": "Blue-Green Advisors",
       "url": "https://bluegreenadvisors.com"
     },
-    "affiliation": [
-      {
-        "@type": "Organization",
-        "name": "Marine Stewardship Council"
-      },
-      {
-        "@type": "Organization",
-        "name": "Blue Ventures"
-      }
-    ],
     "sameAs": [
       "https://www.linkedin.com/in/bluegreenadvisors/",
-      "https://www.regenerateleap.com/",
-      "https://bluegreenadvisors.com",
-      "https://theregenerateframework.com/",
-      "https://ceoworld.biz/author/stuart-j-green/",
-      "https://www.amazon.co.uk/Regenerate-Leap-Transform-Enduring-forward/dp/B0GGTBSMV7"
+      "https://orcid.org/0000-0003-1674-5472",
+      "https://www.researchgate.net/profile/Stuart-Green-6",
+      "https://ceoworld.biz/author/stuart-j-green/"
     ]
   }
 </script>
@@ -82,13 +71,15 @@
     <a href="./" class="brand">STUART J. GREEN</a>
     <nav class="nav-links" id="navLinks">
       <a href="work">Work</a>
+      <a href="ocean">Ocean Advisory</a>
+      <a href="advisory">Board Advisory</a>
       <a href="speaking">Speaking</a>
       <a href="writing">Writing</a>
       <a href="book">Book</a>
       <a href="about">About</a>
-      <a href="contact" class="active">Contact</a>
-      <a href="https://bluegreenadvisors.com" target="_blank" rel="noopener" class="btn btn-primary nav-cta">Enquire about an engagement</a>
+      <a href="contact" class="btn btn-primary nav-cta">Start a Conversation</a>
     </nav>
+    <a href="book" class="nav-book-mobile">Book</a>
     <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">&#9776;</button>
   </div>
 </header>
@@ -96,37 +87,42 @@
 <section style="border-top: none;">
   <div class="container">
     <span class="page-eyebrow fade-in">Contact</span>
-    <h1 class="page-h1 fade-in" style="animation-delay: 0.1s;">Start a conversation</h1>
-    <p class="fade-in" style="animation-delay: 0.15s;">For media enquiries, keynote and speaking availability, advisory engagements, and interview scheduling, send the form below or email the office directly.</p>
+    <h1 class="page-h1 fade-in" style="animation-delay: 0.1s;">Start a Conversation</h1>
+    <p class="fade-in" style="animation-delay: 0.15s;">I welcome enquiries concerning ocean strategy, institutional advisory, board and operating-model challenges, speaking and media contributions. A useful first conversation begins with a specific problem, decision or question. Use the form below to explain the context and what you are hoping to establish.</p>
     <div class="contact-layout fade-in" style="animation-delay: 0.2s; margin-top: 32px;">
-      <form class="enquiry-form" id="enquiryForm" novalidate>
+      <form class="enquiry-form" id="enquiryForm" method="post" action="api/contact">
+        <noscript><p>Please use the direct email address below. This form requires JavaScript and does not submit your details in a URL.</p></noscript>
+        <div style="position:absolute;left:-10000px" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
         <div class="field">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" autocomplete="name" required>
+          <input type="text" id="name" name="name" maxlength="120" autocomplete="name" required>
         </div>
         <div class="field">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" autocomplete="email" required>
+          <input type="email" id="email" name="email" maxlength="254" autocomplete="email" required>
         </div>
         <div class="field">
           <label for="organisation">Organisation</label>
-          <input type="text" id="organisation" name="organisation" autocomplete="organization">
+          <input type="text" id="organisation" name="organisation" maxlength="200" autocomplete="organization" required>
         </div>
         <div class="field">
           <label for="enquiryType">Enquiry type</label>
-          <select id="enquiryType" name="enquiryType">
-            <option value="Speaking">Speaking</option>
-            <option value="Advisory">Advisory</option>
-            <option value="Media">Media</option>
-            <option value="Other">Other</option>
+          <select id="enquiryType" name="enquiryType" required>
+            <option value="">Select an enquiry type</option>
+            <option value="ocean">Ocean Strategy &amp; Advisory</option>
+            <option value="board-advisory">Board &amp; Operating Model Advisory</option>
+            <option value="speaking-media">Speaking &amp; Media</option>
+            <option value="book">The Regenerate Leap</option>
+            <option value="other">Other Enquiry</option>
           </select>
         </div>
         <div class="field">
           <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
+          <textarea id="message" name="message" maxlength="6000" required></textarea>
         </div>
-        <button type="submit" class="btn">Send enquiry</button>
-        <p class="form-note" id="formStatus">This form opens your email app with the details ready to send.</p>
+        <p class="form-note">We use the information you provide to respond to your enquiry and manage any related correspondence. Our website and email service providers process it to help us receive and deliver your message and protect the form against misuse. Please do not include confidential or sensitive information. <a href="privacy">Read our Enquiry Privacy Notice</a> for details.</p>
+        <button type="submit" class="btn">Send Enquiry</button>
+        <p class="form-note" id="formStatus" role="status" aria-live="polite" aria-atomic="true"></p>
       </form>
       <aside class="contact-aside">
         <h3>Reach the office</h3>
@@ -135,7 +131,6 @@
           <div class="row"><span class="label">Book</span><a href="https://www.regenerateleap.com/" target="_blank" rel="noopener">regenerateleap.com</a></div>
           <div class="row"><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/bluegreenadvisors/" target="_blank" rel="noopener">Stuart J. Green</a></div>
         </div>
-        <p style="margin-top: 24px; font-size: 15px; color: var(--grey);">Stuart is available for in-studio broadcast, remote interview, pre-recorded commentary, and panel contributions. For urgent media requests, contact the PR team directly.</p>
       </aside>
     </div>
   </div>
@@ -146,24 +141,26 @@
     <div class="foot-grid">
       <div>
         <h5>Stuart J. Green</h5>
-        <p class="fblurb">Operating Model Advisor and author of <em>The Regenerate Leap</em>. Helping boards and CEOs design what comes next when the previous model no longer fits.</p>
-        <a href="https://bluegreenadvisors.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Enquire about an engagement</a>
+        <p class="fblurb">Ocean strategist, institutional adviser and author of <em>The Regenerate Leap</em>.</p>
+        <a href="contact" class="btn btn-primary btn-sm">Start a Conversation</a>
       </div>
       <div>
-        <h5>The work</h5>
-        <a href="https://bluegreenadvisors.com" target="_blank" rel="noopener">Blue-Green Advisors</a><span class="fdesc">The advisory firm</span>
-        <a href="https://www.regenerateleap.com/" target="_blank" rel="noopener">The Regenerate Leap</a><span class="fdesc">The book</span>
-        <a href="https://theregenerateframework.com" target="_blank" rel="noopener">The Regenerate Framework</a><span class="fdesc">The diagnostic</span>
+        <h5>Connected work</h5>
+        <a href="https://bluegreenadvisors.com" target="_blank" rel="noopener">Blue-Green Advisors</a><span class="fdesc">Specialist ocean advisory.</span>
+        <a href="https://www.regenerateleap.com/" target="_blank" rel="noopener">The Regenerate Leap</a><span class="fdesc">The book and methodology.</span>
+        <a href="https://theregenerateframework.com" target="_blank" rel="noopener">The Regenerate Framework</a><span class="fdesc">Operating-model assessment and institutional advisory method.</span>
       </div>
       <div>
         <h5>Navigate</h5>
-        <a href="work">Work</a>
+        <a href="ocean">Ocean Advisory</a>
+        <a href="advisory">Board Advisory</a>
+        <a href="publications">Publications</a>
         <a href="speaking">Speaking</a>
+        <a href="contact" class="active">Contact</a>
+        <a href="work">Work</a>
         <a href="writing">Writing</a>
         <a href="book">Book</a>
         <a href="about">About</a>
-        <a href="contact" class="active">Contact</a>
-        <a href="publications">Publications</a>
         <a href="media-kit">Media kit</a>
         <a href="operating-model-misfit">Operating model misfit</a>
         <a href="https://www.linkedin.com/in/bluegreenadvisors/" target="_blank" rel="noopener">LinkedIn</a>

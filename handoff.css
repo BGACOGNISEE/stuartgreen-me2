@@ -1,0 +1,667 @@
+body.handoff-static {
+  --handoff-paper: #f7f6f0;
+  --handoff-soft: #e9efed;
+  --handoff-navy: #102b3c;
+  --handoff-navy-light: #15394b;
+  --handoff-teal: #147d83;
+  --handoff-teal-bright: #20939a;
+  --handoff-muted: #526a73;
+  --handoff-line: rgba(16, 43, 60, 0.16);
+  background: var(--handoff-paper);
+  color: var(--handoff-navy);
+  font-family: "Jost", system-ui, sans-serif;
+}
+
+.handoff-static h1,
+.handoff-static h2,
+.handoff-static h3,
+.handoff-static h4,
+.handoff-static .brand,
+.handoff-static .serif {
+  font-family: "Bodoni Moda", Georgia, serif;
+}
+
+.handoff-static .container,
+.handoff-static .wrap {
+  max-width: 1160px;
+  padding-right: 28px;
+  padding-left: 28px;
+}
+
+.handoff-static .nav {
+  background: rgba(247, 246, 240, 0.94);
+  border-bottom-color: var(--handoff-line);
+}
+
+.handoff-static .brand {
+  color: var(--handoff-navy);
+}
+
+.handoff-static .nav-links a:hover,
+.handoff-static .nav-links a.active,
+.handoff-static .text-link {
+  color: var(--handoff-teal);
+}
+
+.handoff-static .menu-btn {
+  color: var(--handoff-navy);
+}
+
+.handoff-static .btn {
+  border-radius: 999px;
+  background: var(--handoff-teal);
+  color: #fff;
+}
+
+.handoff-static .btn:hover {
+  background: var(--handoff-teal-bright);
+}
+
+.handoff-static .btn-dark {
+  background: var(--handoff-navy);
+}
+
+.handoff-static .btn-outline {
+  border: 1px solid currentColor;
+  background: transparent;
+  color: var(--handoff-navy);
+}
+
+.handoff-static .kicker {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--handoff-teal);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.handoff-static .handoff-main section {
+  padding: 72px 0;
+}
+
+.handoff-static .handoff-main .home-hero {
+  padding: 58px 0 64px;
+}
+
+.handoff-static .home-hero-grid,
+.handoff-static .split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(250px, 0.85fr);
+  gap: clamp(34px, 6vw, 78px);
+  align-items: center;
+}
+
+.handoff-static .home-hero h1 {
+  margin-bottom: 18px;
+  color: var(--handoff-navy);
+  font-size: clamp(3rem, 6.5vw, 5.8rem);
+  line-height: 0.99;
+  letter-spacing: -0.03em;
+}
+
+.handoff-static .home-hero .intro {
+  max-width: 640px;
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+  line-height: 1.38;
+}
+
+.handoff-static .home-hero .body {
+  max-width: 560px;
+  margin: 24px 0;
+  color: var(--handoff-muted);
+  font-size: 1.08rem;
+}
+
+.handoff-static .hero-portrait {
+  width: min(100%, 390px);
+  height: auto;
+  margin-left: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.handoff-static .ocean-band {
+  position: relative;
+  padding: 0 !important;
+  min-height: 240px;
+}
+
+.handoff-static .ocean-band img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.handoff-static .ocean-caption {
+  position: absolute;
+  top: 32px;
+  right: max(28px, calc((100vw - 1104px) / 2));
+  max-width: 300px;
+  padding: 20px;
+  background: rgba(247, 246, 240, 0.92);
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.handoff-static .split img,
+.handoff-static .about-portrait {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+}
+
+.handoff-static .copy-large {
+  font-size: 1.22rem;
+  line-height: 1.65;
+}
+
+.handoff-static .copy-body {
+  max-width: 760px;
+  color: var(--handoff-muted);
+  font-size: 1.05rem;
+  line-height: 1.72;
+}
+
+.handoff-static .home-hero p,
+.handoff-static .copy-large,
+.handoff-static .copy-body {
+  margin-bottom: 18px;
+}
+
+.handoff-static .home-hero h2,
+.handoff-static .handoff-main h2 {
+  margin: 8px 0 18px;
+  color: var(--handoff-navy);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.08;
+}
+
+.handoff-static .home-book {
+  background: var(--handoff-soft);
+}
+
+.handoff-static .book-cover {
+  width: min(100%, 275px);
+  height: auto;
+  margin: 0 auto;
+}
+
+.handoff-static .home-book .container.split img.book-cover {
+  width: min(100%, 275px);
+  max-height: none;
+  object-fit: contain;
+}
+
+.handoff-static .speaking-diagram {
+  padding: 36px;
+  background: var(--handoff-navy);
+  color: #f7f6f0;
+}
+
+.handoff-static .speaking-diagram figcaption,
+.handoff-static .speaking-diagram p {
+  color: #d5e5e5;
+  font-size: 0.9rem;
+}
+
+.handoff-static .phases {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin: 28px 0;
+}
+
+.handoff-static .phases span {
+  display: grid;
+  width: 29%;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,0.55);
+  border-radius: 50%;
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+}
+
+.handoff-static .firm-band {
+  position: relative;
+  overflow: hidden;
+  background: var(--handoff-navy);
+  color: #f7f6f0;
+}
+
+.handoff-static .firm-band h2 {
+  color: #fff;
+}
+
+.handoff-static .firm-band .copy-body {
+  color: #d5e5e5;
+}
+
+.handoff-static .firm-mark {
+  width: min(100%, 250px);
+  margin-left: auto;
+  background: #fff;
+}
+
+.handoff-static .contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.handoff-static .contact-links {
+  padding-left: 32px;
+  border-left: 1px solid var(--handoff-line);
+}
+
+.handoff-static .contact-links a {
+  display: block;
+  margin: 14px 0;
+  color: var(--handoff-teal);
+  font-weight: 600;
+}
+
+.handoff-static .page-intro {
+  padding-top: 48px !important;
+}
+
+.handoff-static .page-intro h1 {
+  max-width: 940px;
+  margin: 4px 0 22px;
+  font-size: clamp(2.7rem, 5.4vw, 4.6rem);
+  line-height: 1.06;
+}
+
+.handoff-static .page-intro p {
+  max-width: 780px;
+  color: var(--handoff-muted);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.handoff-static .about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.65fr);
+  gap: clamp(32px, 6vw, 76px);
+  align-items: start;
+}
+
+.handoff-static .about-portrait {
+  max-width: 360px;
+  margin-left: auto;
+  aspect-ratio: 4 / 5;
+}
+
+.handoff-static .about-bio p {
+  margin: 0 0 22px;
+  color: var(--handoff-muted);
+  font-size: 1.36rem;
+  line-height: 1.65;
+}
+
+.handoff-static .bio-links,
+.handoff-static .inline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 24px;
+}
+
+.handoff-static .bio-links a,
+.handoff-static .inline-links a,
+.handoff-static .about-list a {
+  color: var(--handoff-teal);
+  font-weight: 600;
+}
+
+.handoff-static .inline-links a.btn {
+  color: #fff;
+}
+
+.handoff-static .inline-links a.btn-outline {
+  color: var(--handoff-navy);
+}
+
+.handoff-static .info-section {
+  padding-top: 44px !important;
+  border-top: 1px solid var(--handoff-line);
+}
+
+.handoff-static .info-section h2 {
+  font-size: 2.1rem;
+}
+
+.handoff-static .about-list {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.handoff-static .about-list li {
+  color: var(--handoff-muted);
+  font-size: 1.12rem;
+  line-height: 1.55;
+}
+
+.handoff-static .library-shell {
+  padding-top: 18px !important;
+}
+
+.handoff-static .library-controls {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr);
+  gap: 18px;
+}
+
+.handoff-static .library-search label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+.handoff-static .library-search input {
+  width: 100%;
+  min-height: 50px;
+  padding: 10px 14px;
+  border: 1px solid var(--handoff-line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--handoff-navy);
+  font: inherit;
+}
+
+.handoff-static .category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.handoff-static .category-filters button,
+.handoff-static .library-action {
+  min-height: 42px;
+  padding: 8px 15px;
+  border: 1px solid var(--handoff-line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--handoff-navy);
+  cursor: pointer;
+  font: inherit;
+}
+
+.handoff-static .category-filters button[aria-pressed="true"] {
+  border-color: var(--handoff-teal);
+  background: var(--handoff-teal);
+  color: #fff;
+}
+
+.handoff-static .library-status {
+  display: flex;
+  min-height: 48px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0 6px;
+  border-bottom: 1px solid var(--handoff-line);
+  color: var(--handoff-muted);
+}
+
+.handoff-static .library-results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 36px;
+}
+
+.handoff-static .library-results.research-results {
+  grid-template-columns: 1fr;
+}
+
+.handoff-static .library-entry {
+  padding: 26px 0;
+  border-bottom: 1px solid var(--handoff-line);
+}
+
+.handoff-static .library-entry .entry-meta {
+  margin-bottom: 10px;
+  color: var(--handoff-muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.handoff-static .library-entry h2 {
+  margin: 0 0 12px;
+  font-size: 1.6rem;
+  line-height: 1.22;
+}
+
+.handoff-static .library-entry h2 a:hover,
+.handoff-static .library-entry .entry-links a:hover {
+  color: var(--handoff-teal);
+}
+
+.handoff-static .library-entry p {
+  margin: 0 0 12px;
+  color: var(--handoff-muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.handoff-static .library-entry .attribution {
+  font-size: 0.82rem;
+}
+
+.handoff-static .library-entry .entry-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 12px;
+}
+
+.handoff-static .library-entry .entry-links a {
+  color: var(--handoff-teal);
+  font-weight: 600;
+}
+
+.handoff-static .library-more {
+  display: block;
+  margin: 28px auto 0;
+  border-color: var(--handoff-teal);
+  background: var(--handoff-teal);
+  color: white;
+}
+
+.handoff-static .handoff-footer {
+  padding: 38px 0 24px;
+  border-top: 1px solid var(--handoff-line);
+  background: var(--handoff-navy);
+  color: #f7f6f0;
+}
+
+.handoff-static .handoff-footer .foot-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.85fr 0.85fr;
+  gap: 34px;
+  margin-bottom: 32px;
+}
+
+.handoff-static .handoff-footer h5 {
+  margin-bottom: 12px;
+  color: #f7f6f0;
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: 1.2rem;
+}
+
+.handoff-static .handoff-footer .fblurb {
+  max-width: 330px;
+  margin-bottom: 15px;
+  color: #d5e5e5;
+  font-size: 0.94rem;
+}
+
+.handoff-static .handoff-footer .foot-grid > div > a:not(.btn) {
+  display: block;
+  margin: 8px 0 2px;
+  color: #d5e5e5;
+}
+
+.handoff-static .handoff-footer .fdesc {
+  display: block;
+  margin-bottom: 10px;
+  color: #a8c0c3;
+  font-size: 0.82rem;
+}
+
+.handoff-static .handoff-footer .foot-bottom {
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  color: #a8c0c3;
+  font-size: 0.82rem;
+}
+
+.handoff-static .handoff-footer .foot-grid > div:last-child > a {
+  color: #d5e5e5;
+}
+
+.handoff-static .handoff-footer .foot-grid > div:last-child > a:hover {
+  color: #fff;
+}
+
+.handoff-static .handoff-footer .foot-grid .active {
+  color: #8ed1d0 !important;
+}
+
+.handoff-static .handoff-footer .foot-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+  .handoff-static .handoff-footer a:hover { color: #8ed1d0; }
+
+.handoff-static a:focus-visible,
+.handoff-static button:focus-visible,
+.handoff-static input:focus-visible {
+  outline: 2px solid var(--handoff-teal);
+  outline-offset: 3px;
+}
+
+.handoff-static .sjg-press-list {
+  margin-top: 28px;
+  padding: 15px 0;
+  border-top: 1px solid var(--handoff-line);
+  border-bottom: 1px solid var(--handoff-line);
+}
+
+.handoff-static .sjg-press-list summary {
+  color: var(--handoff-teal);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.handoff-static .sjg-press-list .coverage-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 22px;
+  margin-top: 16px;
+}
+
+.handoff-static .sjg-press-list .press-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--handoff-line);
+  color: var(--handoff-navy);
+}
+
+.handoff-static .sjg-press-list .outlet,
+.handoff-static .sjg-press-list .title {
+  display: block;
+}
+
+.handoff-static .sjg-press-list .outlet {
+  color: var(--handoff-teal);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.handoff-static .writing-intro {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 700px) {
+  .handoff-static .container,
+  .handoff-static .wrap {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .handoff-static .home-hero-grid,
+  .handoff-static .split,
+  .handoff-static .about-grid,
+  .handoff-static .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .handoff-static .home-hero-grid {
+    gap: 30px;
+  }
+
+  .handoff-static .hero-portrait {
+    width: min(100%, 340px);
+    margin: 0 auto;
+  }
+
+  .handoff-static .ocean-band img {
+    height: 230px;
+  }
+
+  .handoff-static .ocean-caption {
+    top: auto;
+    right: 16px;
+    bottom: 16px;
+    max-width: 250px;
+    padding: 12px;
+    font-size: 1.25rem;
+  }
+
+  .handoff-static .firm-mark {
+    margin: 0 auto;
+  }
+
+  .handoff-static .contact-links {
+    padding: 20px 0 0;
+    border-top: 1px solid var(--handoff-line);
+    border-left: 0;
+  }
+
+  .handoff-static .about-portrait {
+    margin: 0 auto;
+  }
+
+  .handoff-static .about-bio p {
+    font-size: 1.2rem;
+  }
+
+  .handoff-static .library-results {
+    grid-template-columns: 1fr;
+  }
+
+  .handoff-static .sjg-press-list .coverage-list {
+    grid-template-columns: 1fr;
+  }
+
+  .handoff-static .handoff-footer .foot-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .handoff-static .handoff-main section {
+    padding: 54px 0;
+  }
+}

@@ -1,26 +1,29 @@
 {
   "headerNav": [
     { "label": "Work", "href": "/work" },
+    { "label": "Ocean Advisory", "href": "/ocean" },
+    { "label": "Board Advisory", "href": "/advisory" },
     { "label": "Speaking", "href": "/speaking" },
     { "label": "Writing", "href": "/writing" },
     { "label": "Book", "href": "/book" },
-    { "label": "About", "href": "/about" },
-    { "label": "Contact", "href": "/contact" }
+    { "label": "About", "href": "/about" }
   ],
   "footerNav": [
-    { "label": "Work", "href": "/work" },
+    { "label": "Ocean Advisory", "href": "/ocean" },
+    { "label": "Board Advisory", "href": "/advisory" },
+    { "label": "Publications", "href": "/publications" },
     { "label": "Speaking", "href": "/speaking" },
+    { "label": "Contact", "href": "/contact" },
+    { "label": "Work", "href": "/work" },
     { "label": "Writing", "href": "/writing" },
     { "label": "Book", "href": "/book" },
     { "label": "About", "href": "/about" },
-    { "label": "Contact", "href": "/contact" },
-    { "label": "Publications", "href": "/publications" },
     { "label": "Media kit", "href": "/media-kit" },
     { "label": "Operating model misfit", "href": "/operating-model-misfit" },
     { "label": "LinkedIn", "href": "https://www.linkedin.com/in/bluegreenadvisors/", "external": true }
   ],
   "cta": {
-    "label": "Enquire about an engagement",
-    "href": "https://bluegreenadvisors.com"
+    "label": "Start a Conversation",
+    "href": "/contact"
   }
 }
