@@ -33,6 +33,9 @@ function activeHrefForFile(filename) {
 function buildNav(activeHref) {
   const indent = "      ";
   const lines = [];
+  const externalCta = /^https?:\/\//i.test(config.cta.href);
+  const ctaHref = externalCta ? config.cta.href : toStaticHref(config.cta.href);
+  const ctaAttrs = externalCta ? ' target="_blank" rel="noopener"' : "";
   for (const item of config.headerNav) {
     const href = toStaticHref(item.href);
     const isActive = href === activeHref;
@@ -42,8 +45,8 @@ function buildNav(activeHref) {
   lines.push(
     indent +
       '<a href="' +
-      config.cta.href +
-      '" target="_blank" rel="noopener" class="btn btn-primary nav-cta">' +
+      ctaHref +
+      '"' + ctaAttrs + ' class="btn btn-primary nav-cta">' +
       config.cta.label +
       "</a>"
   );
