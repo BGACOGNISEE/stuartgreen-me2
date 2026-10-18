@@ -15,15 +15,27 @@ export async function onRequestGet({ request, env = {} }) {
         endpoint.origin === new URL(request.url).origin) return fail(503);
   } catch { return fail(503); }
   endpoint.searchParams.set("collection", collection);
+  let upstreamStatus = null;
   try {
     const upstream = await fetch(endpoint, {
       headers: { Accept: "application/json" },
       redirect: "error",
       signal: AbortSignal.timeout(10000),
     });
-    if (!upstream.ok) return fail(502);
+    upstreamStatus = upstream.status;
+    if (!upstream.ok) {
+      console.error("Library proxy upstream error", {
+        name: "UpstreamHTTPError", message: upstream.statusText, status: upstreamStatus,
+      });
+      return fail(502);
+    }
     const records = await upstream.json();
     if (!Array.isArray(records)) return fail(502);
     return Response.json(records, { headers: { "Cache-Control": "no-store" } });
-  } catch { return fail(502); }
+  } catch (error) {
+    console.error("Library proxy request failed", {
+      name: error?.name, message: error?.message, status: upstreamStatus,
+    });
+    return fail(502);
+  }
 }
