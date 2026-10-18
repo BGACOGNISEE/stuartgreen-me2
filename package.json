@@ -4,6 +4,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "nav:check": "node check-nav-sync.mjs"
+    "nav:check": "node check-nav-sync.mjs",
+    "test:library": "node --test tests/library-proxy.test.mjs",
+    "test:workers": "node --test tests/library-workers.test.mjs",
+    "test:nav-checker": "node --test tooling/nav-check.test.mjs"
+  },
+  "devDependencies": {
+    "miniflare": "4.20260730.0"
   }
 }
