@@ -30,6 +30,11 @@ function activeHrefForFile(filename) {
   return slug === "index" ? "./" : slug;
 }
 
+// Internal CTAs use static links in the same tab; external CTAs open a new tab.
+function ctaIsExternal() { return /^https?:\/\//.test(config.cta.href); }
+function ctaHref() { return ctaIsExternal() ? config.cta.href : toStaticHref(config.cta.href); }
+function ctaAttrs() { return ctaIsExternal() ? ' target="_blank" rel="noopener"' : ""; }
+
 function buildNav(activeHref) {
   const indent = "      ";
   const lines = [];
@@ -42,8 +47,8 @@ function buildNav(activeHref) {
   lines.push(
     indent +
       '<a href="' +
-      config.cta.href +
-      '" target="_blank" rel="noopener" class="btn btn-primary nav-cta">' +
+      ctaHref() +
+      '"' + ctaAttrs() + ' class="btn btn-primary nav-cta">' +
       config.cta.label +
       "</a>"
   );
