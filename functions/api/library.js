@@ -18,7 +18,8 @@ export async function onRequestGet({ request, env = {} }) {
   try {
     const upstream = await fetch(endpoint, {
       headers: { Accept: "application/json" },
-      redirect: "error",
+      // Workers does not support "error"; manual redirects fail the !ok check below.
+      redirect: "manual",
       signal: AbortSignal.timeout(10000),
     });
     if (!upstream.ok) return fail(502);
